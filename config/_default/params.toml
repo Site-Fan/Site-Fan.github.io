@@ -5,10 +5,10 @@ isSinglePage = true
 description = "Hello"
 
 # Header Configuration
-avatar = "img/profile-picture.jpg"
+avatar = "https://avatars.githubusercontent.com/u/109007949?v=4"
 
 #favicon
-favicon = "icons/favicon.ico"
+favicon = "icons/favicon-32x32.png"
 
 # disqus is a comment system. see https://disqus.com
 disqusShortname = ""

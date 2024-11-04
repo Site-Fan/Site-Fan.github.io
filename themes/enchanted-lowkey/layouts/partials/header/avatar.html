@@ -1,14 +1,26 @@
-{{ $avatar := resources.GetMatch .Site.Params.avatar }} 
-{{ $tiny := ($avatar.Fill "80x80 q90") }}
+{{ $avatarURL := .Site.Params.avatar }}
+{{ $isRemote := strings.HasPrefix $avatarURL "https" }}
+{{ $tiny := "" }} <!-- Initialize $tiny -->
+{{ $avatar := "" }} <!-- Initialize $avatar -->
+
+{{ if not $isRemote }}
+  {{ $avatar = resources.GetMatch $avatarURL }}
+  {{ $tiny = ($avatar.Fill "80x80 q90") }} <!-- Assign to $tiny -->
+{{ end }}
 
 <div class="flex-none w-20 h-20 rounded-full overflow-hidden">
   <a href="{{ .Site.BaseURL }}">
     <img
-      srcset="{{- with $tiny.RelPermalink -}}{{.}} 80w{{- end -}}"
-      src="{{ $avatar.RelPermalink }}"
-      width="{{ $avatar.Width }}"
-      height="{{ $avatar.Height }}"
-      alt="{{ .Site.Title }}"
+      {{ if $isRemote }}
+        src="{{ $avatarURL }}"
+        alt="{{ .Site.Title }}"
+      {{ else }}
+        srcset="{{- with $tiny.RelPermalink -}}{{.}} 80w{{- end -}}"
+        src="{{ $avatar.RelPermalink }}"
+        width="{{ $avatar.Width }}"
+        height="{{ $avatar.Height }}"
+        alt="{{ .Site.Title }}"
+      {{ end }}
     />
   </a>
 </div>

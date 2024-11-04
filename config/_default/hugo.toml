@@ -1,12 +1,12 @@
-baseURL = 'http://example.org/'
+baseURL = 'https://site-fan.github.io/'
 copyright = "{year}" # To make 2007 - 2022. Just add before {year} example: 2007 - {year}
 languageCode = 'en-US'
 defaultContentLanguage = 'en'
 theme = 'enchanted-lowkey'
-title = 'Enhanced Lowkey Hugo'
+title = 'Site Fan'
 enableRobotsTXT = true
 summaryLength = 15
-paginate = 5
+paginate = 15
 
 
 [markup]
@@ -22,5 +22,22 @@ paginate = 5
     lineNumbersInTable = false
     noClasses = true
     noHl = false
-    style = 'dracula'
+    style = 'dracula'  # Change to your preferred style
     tabWidth = 4
+
+  [markup.goldmark]
+    [markup.goldmark.extensions]
+      smartypants = true
+      definitionList = true
+      tables = true
+	[markup.goldmark.extensions.passthrough]
+        enable = true
+        [markup.goldmark.extensions.passthrough.delimiters]
+          block = [['\[', '\]'], ['$$', '$$']]
+          inline = [['\(', '\)']]
+
+[params]
+  math = true
+
+[frontmatter]
+  lastmod = [":fileModTime", "lastmod"]

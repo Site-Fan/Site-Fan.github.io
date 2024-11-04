@@ -1,10 +1,15 @@
-{{ $img := .Page.Resources.GetMatch (printf "%s" (.Get "src" | safeURL )) }}
+{{ $imgSrc := .Get "src" | safeURL }}
+{{ $img := .Page.Resources.GetMatch (printf "%s" $imgSrc) }}
 {{ $alt := .Get "alt" }}
 {{ $caption := .Get "caption" }}
 {{ $captionPosition := .Get "caption-position" }}
+{{ $style := .Get "style" | safeCSS }}
 
 <figure class='mb-5'>
-  <img src="{{ $img.RelPermalink }}" {{ with $alt }} alt="{{ . }}" {{ end }} width="{{ $img.Width }}" height="{{ $img.Height }}" />
+	<img src="{{ if $img }}{{ $img.RelPermalink }}{{ else }}{{ $imgSrc }}{{ end }}" 
+       {{ with $alt }} alt="{{ . }}" {{ end }}
+       {{ with $style }} style="{{ . }}" {{ end }} class="block mx-auto"
+	/>
   
   {{ with $caption }}
     <figcaption 

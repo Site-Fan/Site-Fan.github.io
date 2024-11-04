@@ -5,9 +5,15 @@
     weight = 1
 
 [[main]]
-    identifier = "about"
-    name = "About me"
-    url = "/about"
+    identifier = "project"
+    name = "Projects"
+    url = "/project"
+    weight = 6
+
+[[main]]
+    identifier = "post"
+    name = "Posts"
+    url = "/posts"
     weight = 2
 
 [[main]]
@@ -23,27 +29,34 @@
     weight = 4
 
 [[main]]
-    identifier = "donate"
-    name = "Donate"
-    url = "https://ko-fi.com/nixentric"
+    identifier = "contact"
+    name = "Contact"
+    url = "/contact"
     weight = 5
     
 # Social Media Configuration
 
 [[social]]
-    identifier = "twitter"
-    name = "Twitter"
-    url = "#"
+    identifier = "CV"
+    name = "CV"
+    url = "./CV_Site_Fan.pdf"
     weight = 1
 
 [[social]]
-    identifier = "instagram"
-    name = "Instagram"
-    url = "#"
+    identifier = "email"
+    name = "Email"
+    url = "mailto:sitefan.official@gmail.com"
     weight = 2
 
 [[social]]
     identifier = "github"
     name = "GitHub"
-    url = "#"
+    url = "https://github.com/GuTaoZi"
     weight = 3
+
+[[social]]
+    identifier = "linkedin"
+    name = "LinkedIn"
+    url = "https://www.linkedin.com/in/site-fan-322802294/"
+    weight = 4
+
