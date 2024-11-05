@@ -1,5 +1,6 @@
 ---
-title: Hello, I am Site Fan! 👋
+title: Site Fan
+header: Hello, I am Site Fan! 👋
 categories: Me
 ---
 
@@ -37,7 +38,7 @@ My primary research focus involves **building reliable and efficient systems**, 
 {{< /alert >}}
 
 {{< alert info "" >}}
-<strong>LiteSys: Achieving Cost-Effective Service Continuity for Datacenter Software</strong><ul><li><b>Research Intern</b> at Order Lab, University of Michigan</li><li>Developed a cost-effective framework for datacenter software to preserve availability during incidents without the resource-intensive demands of full replication.</li></ul>
+<strong>LiteSys: Achieving Cost-Effective Service Continuity for Datacenter Software</strong><ul><li><b>Research Intern</b> at Order Lab, University of Michigan</li><li>Developed a cost-effective framework for datacenter software to preserve availability during incidents without the resource-intensive demands of full replication.</li><li>Preparing for submission to <a href = "https://www.usenix.org/conference/osdi25">OSDI' 25</a>.</li></ul>
 {{< /alert >}}
 
 {{< alert success "" >}}

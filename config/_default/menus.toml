@@ -39,7 +39,7 @@
 [[social]]
     identifier = "CV"
     name = "CV"
-    url = "./CV_Site_Fan.pdf"
+    url = "/CV_Site_Fan.pdf"
     weight = 1
 
 [[social]]

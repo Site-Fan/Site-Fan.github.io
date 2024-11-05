@@ -1,4 +1,8 @@
-## Projects
+---
+title: Projects
+type: taxonomies
+layout: "home"
+---
 
 \* Most of my projects are open source at [github.com/GuTaoZi](https://github.com/GuTaoZi?tab=repositories), only part of projects are listed here.
 

@@ -1,4 +1,8 @@
-## Contact
+---
+title: Contact
+type: taxonomies
+layout: "home"
+---
 
 $$
 \begin{align*}

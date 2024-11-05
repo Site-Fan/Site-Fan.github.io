@@ -1,3 +1,4 @@
 ---
-title: ""
+title: Posts
+layout: "home"
 ---

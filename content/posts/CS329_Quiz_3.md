@@ -3,7 +3,7 @@ title: CS329 Machine Learning Quiz 3
 tags: [Machine Learning, Artificial Intelligence]
 categories: CS
 description: Quiz 3 for ML, Neural Networks.
-date: 2023-11-28
+date: 2023-11-29
 ---
 
 ### Before Quiz

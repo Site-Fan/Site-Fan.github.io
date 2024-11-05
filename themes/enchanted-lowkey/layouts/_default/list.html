@@ -1,10 +1,20 @@
+<!--
+ * @Author: GuTaoZi gutao.official@gmail.com
+ * @Date: 2024-11-04 15:45:48
+ * @LastEditors: GuTaoZi gutao.official@gmail.com
+ * @LastEditTime: 2024-11-05 16:58:33
+ * @FilePath: \Blog\themes\enchanted-lowkey\layouts\_default\list.html
+ * @Description: 
+ * 
+ * Copyright (c) 2024 by ${git_name_email}, All Rights Reserved. 
+-->
 {{ define "main" }}
 
 {{ $pages := .Pages }}
 {{ $paginator := .Paginate $pages }}
 
 <div class="flex flex-col gap-1">
-  <h1 class="text-2xl font-extrabold">
+  <h1 class="title-large">
     {{ if .Params.header }}
       {{ .Params.header }}
     {{ else }}
