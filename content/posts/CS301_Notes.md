@@ -49,7 +49,7 @@ Compiler, Assembler, Linker, Loader
 - Flags: special bits providing info about the results
 - Zero, Negative, Overflow (abbr. V), Carry
 
-<img src="https://s2.loli.net/2024/09/14/6adhxPjmVHb9WAU.png" alt="1b74c3d8d6b2caa9353dd0f48fd8802d.png" style="zoom: 33%;" />
+{{<img src="https://s2.loli.net/2024/09/14/6adhxPjmVHb9WAU.png" alt="1b74c3d8d6b2caa9353dd0f48fd8802d.png" style="zoom: 33%;" >}}
 
 **ALU Operands**: register vs. data memory
 
@@ -72,7 +72,7 @@ See slides for the functions of CPU registers
 
 Memory and IO device share address space, CPU treats IO device as memory
 
-<img src="https://s2.loli.net/2024/09/14/rO67Yqtdfxhel8i.png" alt="090f9fbcc61911f1df133fff5e707aac.png" style="zoom:50%;" />
+{{<img src="https://s2.loli.net/2024/09/14/rO67Yqtdfxhel8i.png" alt="090f9fbcc61911f1df133fff5e707aac.png" style="zoom:50%;" >}}
 
 ### General Purpose Input Output
 

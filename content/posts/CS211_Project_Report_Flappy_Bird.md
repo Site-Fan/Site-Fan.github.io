@@ -36,11 +36,11 @@ date: 2022-11-06
 
 2. **System work flow chart**
 
-   <img src="https://s2.loli.net/2022/08/04/tRlj5IZaWAVKTJ3.png" alt="System work flow chart" style="zoom: 67%;" />
+   {{<img src="https://s2.loli.net/2022/08/04/tRlj5IZaWAVKTJ3.png" alt="System work flow chart" style="zoom: 67%;" >}}
 
 3. **System frame diagram**
 
-   <img src="https://s2.loli.net/2022/08/04/eb5SPRATqdhuMEf.png" alt="System frame diagram" style="zoom: 80%;" />
+   {{<img src="https://s2.loli.net/2022/08/04/eb5SPRATqdhuMEf.png" alt="System frame diagram" style="zoom: 80%;" >}}
 
 4. **Port logic function description**
 
@@ -73,7 +73,7 @@ date: 2022-11-06
 
    The system is divided into 11 sub-modules, the relation between modules are shown as follows.
 
-   <img src="https://s2.loli.net/2022/08/04/j7Kgtlx3wiH1PD9.png" alt="submodule design" style="zoom: 33%;" />
+   {{<img src="https://s2.loli.net/2022/08/04/j7Kgtlx3wiH1PD9.png" alt="submodule design" style="zoom: 33%;" >}}
 
    - **(a) Main module**
 

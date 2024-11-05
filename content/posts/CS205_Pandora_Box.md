@@ -7,7 +7,7 @@ description: 頼むよ神様。 こんな人生だったんだ。 せめて一�
 
 ### Background
 
-<img src="https://s2.loli.net/2023/11/03/c9SLXKhob4CVzwU.png" alt="_RKU5WY0KCJ8K_XMQ41U85G.png" style="zoom: 33%;" />
+{{<img src="https://s2.loli.net/2023/11/03/c9SLXKhob4CVzwU.png" alt="_RKU5WY0KCJ8K_XMQ41U85G.png" style="zoom: 33%;" >}}
 
 <center><i><b><span style="color:#eb234b;">「奇迹ってのはタダじゃないんだ。希望を祈ればそれと同じ分だけの绝望が撒き散らされる。」</span></b></i></center>
 

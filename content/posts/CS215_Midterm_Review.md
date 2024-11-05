@@ -458,31 +458,31 @@ The elements of this subfield are the elements $a\in \mathbb F_{p^m}$ satisfying
 
 **Base-b Expansions **：
 
-<img src="https://s2.loli.net/2023/01/01/4MF6VOsPHNdRLWv.png" alt="image.png" style="zoom:50%;" />
+{{<img src="https://s2.loli.net/2023/01/01/4MF6VOsPHNdRLWv.png" alt="image.png" style="zoom:50%;" >}}
 
 $O(\log n)$
 
 **Binary Addition of Integers**
 
-<img src="https://s2.loli.net/2023/01/01/fX4BUCMSb8daslh.png" alt="image.png" style="zoom:50%;" />
+{{<img src="https://s2.loli.net/2023/01/01/fX4BUCMSb8daslh.png" alt="image.png" style="zoom:50%;" >}}
 
 $O(n)$ bit additions
 
 **Binary Multiplication of Integers**
 
-<img src="https://s2.loli.net/2023/01/01/5VfLZkEC8MuaYxX.png" alt="image.png" style="zoom:50%;" />
+{{<img src="https://s2.loli.net/2023/01/01/5VfLZkEC8MuaYxX.png" alt="image.png" style="zoom:50%;" >}}
 
 $O(n^2)$ shifts and $O(n^2)$ bit additions
 
 **Computing div and mod**
 
-<img src="https://s2.loli.net/2023/01/01/1vSPrNWfLFw9KkZ.png" alt="image.png" style="zoom:50%;" />
+{{<img src="https://s2.loli.net/2023/01/01/1vSPrNWfLFw9KkZ.png" alt="image.png" style="zoom:50%;" >}}
 
 $O(\log q\log a)$ bit operations
 
 **Binary Modular Exponentiation**：
 
-<img src="https://s2.loli.net/2023/01/01/mO8rTNgWoRHSniB.png" alt="image.png" style="zoom:50%;" />
+{{<img src="https://s2.loli.net/2023/01/01/mO8rTNgWoRHSniB.png" alt="image.png" style="zoom:50%;" >}}
 
 $O((\log m)^2\log n)$ bit operations
 
@@ -513,7 +513,7 @@ $lcm(a,b)=\prod\limits_{i=1}^{n}p_i^{max(a_i,b_i)}$
 
 **Euclidean algorithm ($O(\log b)$)**：
 
-<img src="https://s2.loli.net/2023/01/01/n6vDqzNV9es2PXt.png" alt="image.png" style="zoom:50%;" />
+{{<img src="https://s2.loli.net/2023/01/01/n6vDqzNV9es2PXt.png" alt="image.png" style="zoom:50%;" >}}
 
 **Lemma** Let $a=bq+r$, where $a,b,q,r$ are integers. Then $gcb(a,b)=gcd(b,r)$
 

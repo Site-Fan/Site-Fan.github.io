@@ -394,7 +394,7 @@ A poset in which every pair of elements has both a least upper bound and a great
 
 Given a partial ordering $R$, find a total ordering $≼$ such that $a≼b$ whenever $a\ R\ b$. $≼$ is said **compatible**  with $R$.
 
-<img src="https://s2.loli.net/2023/01/02/SmQ43Gcoi9Nlnk8.png" alt="image.png" style="zoom:50%;" />
+{{<img src="https://s2.loli.net/2023/01/02/SmQ43Gcoi9Nlnk8.png" alt="image.png" style="zoom:50%;" >}}
 
 # Chapter 13 - Graph
 
@@ -432,25 +432,25 @@ $|E|=\sum\limits_{v\in V}deg^-(v)=\sum\limits_{v\in V}deg^+(v)$
 
 A complete graph on $n$ vertices, denoted by $K_n$, is the simple graph that contains exactly one edge between each pair of distinct vertices.
 
-<img src="https://s2.loli.net/2023/01/02/FLgD3CjqZrykNEK.png" alt="image.png" style="zoom:50%;" />
+{{<img src="https://s2.loli.net/2023/01/02/FLgD3CjqZrykNEK.png" alt="image.png" style="zoom:50%;" >}}
 
 **Cycles**：
 
 A cycle $C_n$ for $n \ge 3$ consists of $n$ vertices $v_1, v_2,\cdots, v_n$, and edges $\{v_1,v_2\},\{v_2,v_3\},\cdots,\{v_{n-1},v_n\},\{v_n,v_1\}$.
 
-<img src="https://s2.loli.net/2023/01/02/fvPKBXwR3t8JIyo.png" alt="image.png" style="zoom:50%;" />
+{{<img src="https://s2.loli.net/2023/01/02/fvPKBXwR3t8JIyo.png" alt="image.png" style="zoom:50%;" >}}
 
 **Wheels**：
 
 A wheel $W_n$ is obtained by adding an additional vertex to a cycle $C_n$.
 
-<img src="https://s2.loli.net/2023/01/02/FsuZT7cd2tvEbXQ.png" alt="image.png" style="zoom:50%;" />
+{{<img src="https://s2.loli.net/2023/01/02/FsuZT7cd2tvEbXQ.png" alt="image.png" style="zoom:50%;" >}}
 
 **N-dimensional Hypercube**：
 
 An  n-cube $Q_n$ is a graph with $2^n$ vertices representing all bit strings of length $n$, where there is an edge between two vertices that differ in exactly one bit position.
 
-<img src="https://s2.loli.net/2023/01/02/LMvoapSku5HEOFB.png" alt="image.png" style="zoom:50%;" />
+{{<img src="https://s2.loli.net/2023/01/02/LMvoapSku5HEOFB.png" alt="image.png" style="zoom:50%;" >}}
 
 **Bipartite Graphs**：
 

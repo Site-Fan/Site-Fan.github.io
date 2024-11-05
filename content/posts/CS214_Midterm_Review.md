@@ -474,7 +474,7 @@ Instruction Formats
 
 ### §2.7 Addressing
 
-<img src="https://s2.loli.net/2023/04/12/73bqCv5AmxMslwz.png" alt="image.png" style="zoom:67%;" />
+{{<img src="https://s2.loli.net/2023/04/12/73bqCv5AmxMslwz.png" alt="image.png" style="zoom:67%;" >}}
 
 **Immediate Addressing**:
 
@@ -490,7 +490,7 @@ $\text{hi = x>>16}$, $\text{lo=x-(hi<<16)}$
 
 Using register as the operand.
 
-<img src="https://s2.loli.net/2023/04/12/mRP9EeWzLYSHJwq.png" alt="image.png" style="zoom:50%;" />
+{{<img src="https://s2.loli.net/2023/04/12/mRP9EeWzLYSHJwq.png" alt="image.png" style="zoom:50%;" >}}
 
 **Base/displacement Addressing**:
 
@@ -518,7 +518,7 @@ If branch target is too far to encode with 16-bit offset, assembler rewrites the
 
 **A translation hierarchy for C**:
 
-<img src="https://s2.loli.net/2023/04/12/Og1dI2isJ5Mq7Ao.png" alt="image.png" style="zoom:67%;" />
+{{<img src="https://s2.loli.net/2023/04/12/Og1dI2isJ5Mq7Ao.png" alt="image.png" style="zoom:67%;" >}}
 
 **Role of Assembler**:
 
@@ -544,7 +544,7 @@ If branch target is too far to encode with 16-bit offset, assembler rewrites the
 
 **A translation hierarchy for Java**:
 
-<img src="https://s2.loli.net/2023/04/12/5A3ytqQFM42BUNr.png" alt="image.png" style="zoom: 67%;" />
+{{<img src="https://s2.loli.net/2023/04/12/5A3ytqQFM42BUNr.png" alt="image.png" style="zoom: 67%;" >}}
 
 ### §2.9 RISC-V
 
@@ -645,7 +645,7 @@ ARM v8, Intel x86
 
 **1-bit Adder**:
 
-<img src="https://s2.loli.net/2023/04/13/ZDsigL6rwNOdK5z.png" alt="image.png" style="zoom:33%;" />
+{{<img src="https://s2.loli.net/2023/04/13/ZDsigL6rwNOdK5z.png" alt="image.png" style="zoom:33%;" >}}
 
 **1-bit ALU and 32-bit ALU**:
 
@@ -671,7 +671,7 @@ To obtain 32-bit ALU, sequentially connect the 1-bit ALU via `Carry`, bind `op` 
 
 **Naive version**:
 
-<img src="https://s2.loli.net/2023/04/13/sdiNn6Oh9qX5BaW.png" alt="image.png" style="zoom: 33%;" />
+{{<img src="https://s2.loli.net/2023/04/13/sdiNn6Oh9qX5BaW.png" alt="image.png" style="zoom: 33%;" >}}
 
 
 
@@ -679,7 +679,7 @@ If the least significant bit of the multiplier is 1, add the multiplicand to the
 
 **Refined version**:
 
-<img src="https://s2.loli.net/2023/04/13/45pRS9xjfK8ocCH.png" alt="image.png" style="zoom: 33%;" />
+{{<img src="https://s2.loli.net/2023/04/13/45pRS9xjfK8ocCH.png" alt="image.png" style="zoom: 33%;" >}}
 
 The Multiplicand register, ALU, and Multiplier register are all 32 bits wide, with only the Product register left at 64 bits.
 

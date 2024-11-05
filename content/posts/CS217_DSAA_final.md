@@ -17,7 +17,7 @@ Iteration, Recursion
 
 ## Algorithm Analysis
 
-<img src="https://s2.loli.net/2023/01/07/guLBibrv59NMZxQ.png" alt="image.png" style="zoom:50%;" />
+{{<img src="https://s2.loli.net/2023/01/07/guLBibrv59NMZxQ.png" alt="image.png" style="zoom:50%;" >}}
 
 CPU Basic (atomic) operations
 
@@ -80,39 +80,39 @@ return l;
 
 Big-O Notation
 
-<img src="https://s2.loli.net/2023/01/07/23DTsghj8wN7ZGF.png" alt="image.png" style="zoom:50%;" />
+{{<img src="https://s2.loli.net/2023/01/07/23DTsghj8wN7ZGF.png" alt="image.png" style="zoom:50%;" >}}
 
 Big-Ω Notation
 
-<img src="https://s2.loli.net/2023/01/07/H5OqWMoCKBQJN6k.png" alt="image.png" style="zoom:50%;" />
+{{<img src="https://s2.loli.net/2023/01/07/H5OqWMoCKBQJN6k.png" alt="image.png" style="zoom:50%;" >}}
 
 Big-Θ Notation
 
-<img src="https://s2.loli.net/2023/01/07/Jls7Ym8nPtUubDe.png" alt="image.png" style="zoom:50%;" />
+{{<img src="https://s2.loli.net/2023/01/07/Jls7Ym8nPtUubDe.png" alt="image.png" style="zoom:50%;" >}}
 
 ## Sorting
 
 Selection sort
 
-<img src="https://s2.loli.net/2023/01/07/L3ChUQbcRn1JkTs.png" alt="image.png" style="zoom:50%;" />
+{{<img src="https://s2.loli.net/2023/01/07/L3ChUQbcRn1JkTs.png" alt="image.png" style="zoom:50%;" >}}
 
 Insertion sort
 
-<img src="https://s2.loli.net/2023/01/07/iBv9AzLkywRgYu7.png" alt="image.png" style="zoom:50%;" />
+{{<img src="https://s2.loli.net/2023/01/07/iBv9AzLkywRgYu7.png" alt="image.png" style="zoom:50%;" >}}
 
 Bubble sort
 
-<img src="https://s2.loli.net/2023/01/07/g2XKiwVMCQnkjtD.png" alt="image.png" style="zoom:50%;" />
+{{<img src="https://s2.loli.net/2023/01/07/g2XKiwVMCQnkjtD.png" alt="image.png" style="zoom:50%;" >}}
 
 Merge sort
 
-<img src="https://s2.loli.net/2023/01/07/TQvS3cqBDfjxd8I.png" alt="image.png" style="zoom:50%;" />
+{{<img src="https://s2.loli.net/2023/01/07/TQvS3cqBDfjxd8I.png" alt="image.png" style="zoom:50%;" >}}
 
-<img src="https://s2.loli.net/2023/01/07/inEZaeqVXT1F4BD.png" alt="image.png" style="zoom:50%;" />
+{{<img src="https://s2.loli.net/2023/01/07/inEZaeqVXT1F4BD.png" alt="image.png" style="zoom:50%;" >}}
 
 Matser Theorem
 
-<img src="https://s2.loli.net/2023/01/07/uPpn5dhbofysRlq.png" alt="image.png" style="zoom:50%;" />
+{{<img src="https://s2.loli.net/2023/01/07/uPpn5dhbofysRlq.png" alt="image.png" style="zoom:50%;" >}}
 
 Quick sort
 
@@ -150,7 +150,7 @@ function partition(arr, left ,right) {     // 分区操作
 
 $e_i$ and $e_j$ are compared IFF either one is the first among $e_i, e_{i+1},\cdots, e_j$ picked as a pivot.
 
-<img src="https://s2.loli.net/2023/01/07/k3pjNxn8EP4W7zs.png" alt="image.png" style="zoom:50%;" />
+{{<img src="https://s2.loli.net/2023/01/07/k3pjNxn8EP4W7zs.png" alt="image.png" style="zoom:50%;" >}}
 
 Complexity Summary
 
@@ -181,17 +181,17 @@ void shell_sort(int arr[], int len) {
 
 Counting sort
 
-<img src="https://www.runoob.com/wp-content/uploads/2019/03/countingSort.gif" style="zoom:50%;" />
+{{<img src="https://www.runoob.com/wp-content/uploads/2019/03/countingSort.gif" style="zoom:50%;" >}}
 
 Radix sort
 
-<img src="https://www.runoob.com/wp-content/uploads/2019/03/radixSort.gif" style="zoom:50%;" />
+{{<img src="https://www.runoob.com/wp-content/uploads/2019/03/radixSort.gif" style="zoom:50%;" >}}
 
 Bucket sort
 
-<img src="https://www.runoob.com/wp-content/uploads/2019/03/Bucket_sort_1.svg_.png"  />
+{{<img src="https://www.runoob.com/wp-content/uploads/2019/03/Bucket_sort_1.svg_.png"  >}}
 
-<img src="https://www.runoob.com/wp-content/uploads/2019/03/Bucket_sort_2.svg_.png"  />
+{{<img src="https://www.runoob.com/wp-content/uploads/2019/03/Bucket_sort_2.svg_.png"  >}}
 
 ## Linked List
 
@@ -212,7 +212,7 @@ Circular linked list
 
 First In Last Out
 
-<img src="https://s2.loli.net/2023/01/07/ZFqiK73UmcgL69T.png" alt="image.png" style="zoom:50%;" />
+{{<img src="https://s2.loli.net/2023/01/07/ZFqiK73UmcgL69T.png" alt="image.png" style="zoom:50%;" >}}
 
 Applications: Delimiters balance problem, Evaluating arithmetic expressions, The runtime stack in memory
 
@@ -222,11 +222,11 @@ Prefix/Infix/Postfix expression
 
 First In First Out
 
-<img src="https://s2.loli.net/2023/01/07/SuFQyIO9J7kwRea.png" alt="image.png" style="zoom:50%;" />
+{{<img src="https://s2.loli.net/2023/01/07/SuFQyIO9J7kwRea.png" alt="image.png" style="zoom:50%;" >}}
 
 Ring queue
 
-<img src="https://s2.loli.net/2023/01/07/p1g4YT6nEUXZoFA.png" alt="image.png" style="zoom:50%;" />
+{{<img src="https://s2.loli.net/2023/01/07/p1g4YT6nEUXZoFA.png" alt="image.png" style="zoom:50%;" >}}
 
 All operations above takes $O(1)$ time complexity.
 
@@ -236,17 +236,17 @@ All operations above takes $O(1)$ time complexity.
 
 Brute Force $O(mn)$
 
-<img src="https://s2.loli.net/2023/01/07/IRKWd4758mvjXpb.png" alt="image.png" style="zoom:50%;" />
+{{<img src="https://s2.loli.net/2023/01/07/IRKWd4758mvjXpb.png" alt="image.png" style="zoom:50%;" >}}
 
 Rabin-Karp Algorithm $O(mn)$
 
-<img src="https://s2.loli.net/2023/01/07/KExkrpRCdsSX3z2.png" alt="image.png" style="zoom:50%;" />
+{{<img src="https://s2.loli.net/2023/01/07/KExkrpRCdsSX3z2.png" alt="image.png" style="zoom:50%;" >}}
 
 KMP $O(m+n)$
 
-<img src="https://s2.loli.net/2023/01/07/m6Xb14INu9FPVLz.png" alt="image.png" style="zoom:50%;" />
+{{<img src="https://s2.loli.net/2023/01/07/m6Xb14INu9FPVLz.png" alt="image.png" style="zoom:50%;" >}}
 
-<img src="https://s2.loli.net/2023/01/07/zetLS1yVfwFIPqs.png" alt="image.png" style="zoom:50%;" />
+{{<img src="https://s2.loli.net/2023/01/07/zetLS1yVfwFIPqs.png" alt="image.png" style="zoom:50%;" >}}
 
 
 
@@ -258,7 +258,7 @@ KMP $O(m+n)$
 - $\Sigma$, the input alphabet
 - $\delta$, the transition function $Q\times \Sigma→Q$
 
-<img src="https://s2.loli.net/2023/01/07/kxRLO5YAUwJXFj2.png" alt="image.png" style="zoom:50%;" />
+{{<img src="https://s2.loli.net/2023/01/07/kxRLO5YAUwJXFj2.png" alt="image.png" style="zoom:50%;" >}}
 
 ## Tree
 
@@ -274,7 +274,7 @@ preorder, inorder, postorder traversal
 
 Character Encoding & Huffman Tree
 
-<img src="https://s2.loli.net/2023/01/07/8lW4O3DwILt5iad.png" alt="image.png" style="zoom:50%;" />
+{{<img src="https://s2.loli.net/2023/01/07/8lW4O3DwILt5iad.png" alt="image.png" style="zoom:50%;" >}}
 
 Given a Huffman tree, it includes at least 2 nodes, assume node $u$ and node $v$ have the top-2 lowest frequencies, then
 
@@ -337,11 +337,11 @@ predecessor($\max\{a[i]\le q\}$), successor($\min\{a[i]\ge q\}$): $O(h)$
 
 Insert: $O(h)$
 
-<img src="https://s2.loli.net/2023/01/08/183xdOHumtvXn2P.png" alt="image.png" style="zoom: 40%;" />
+{{<img src="https://s2.loli.net/2023/01/08/183xdOHumtvXn2P.png" alt="image.png" style="zoom: 40%;" >}}
 
 Delete: $O(h)$
 
-<img src="https://s2.loli.net/2023/01/08/LICKz3nltBhc8Tx.png" alt="image.png" style="zoom:50%;" />
+{{<img src="https://s2.loli.net/2023/01/08/LICKz3nltBhc8Tx.png" alt="image.png" style="zoom:50%;" >}}
 
 ### BBST
 
@@ -392,15 +392,15 @@ DFS tree, Cycle detection, topological sort
 
 Dijkstra: $O((|V|+|E|)\log |V|)$
 
-<img src="https://s2.loli.net/2023/01/08/k48ZqQhlP23gJnj.png" alt="image.png" style="zoom:40%;" />
+{{<img src="https://s2.loli.net/2023/01/08/k48ZqQhlP23gJnj.png" alt="image.png" style="zoom:40%;" >}}
 
 Correctness proof: 
 
-<img src="https://s2.loli.net/2023/01/08/QCciM1UtHqRp3LT.png" alt="image.png" style="zoom:50%;" />
+{{<img src="https://s2.loli.net/2023/01/08/QCciM1UtHqRp3LT.png" alt="image.png" style="zoom:50%;" >}}
 
 Minimum Spanning Tree (Prim): $O(|V|\log |V|+|E|)$
 
-<img src="https://s2.loli.net/2023/01/08/kARudvoBUrhEZac.png" alt="image.png" style="zoom:50%;" />
+{{<img src="https://s2.loli.net/2023/01/08/kARudvoBUrhEZac.png" alt="image.png" style="zoom:50%;" >}}
 
 Strongly Connected Components $O(|V|+|E|)$
 

@@ -49,7 +49,7 @@ date: 2023-11-29
 
 ### Question 1 Neural Networks without Prior
 
-<img src="https://s2.loli.net/2023/11/28/b7tYKeFscGjp6Dw.png" alt="image.png" style="zoom:50%;" />
+{{<img src="https://s2.loli.net/2023/11/28/b7tYKeFscGjp6Dw.png" alt="image.png" style="zoom:50%;" >}}
 
 #### Question 1.1
 

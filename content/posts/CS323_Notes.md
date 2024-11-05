@@ -168,7 +168,7 @@ Interpreter
 
   
 
-<img src="https://s2.loli.net/2023/09/18/SGh7Y2mHFJ8bM63.png" alt="image.png" style="zoom:50%;" />
+{{<img src="https://s2.loli.net/2023/09/18/SGh7Y2mHFJ8bM63.png" alt="image.png" style="zoom:50%;" >}}
 
 **lexeme**: a string of characters that is a lowest-level syntactic unit in programming languages
 
@@ -348,7 +348,7 @@ Finite automata are graphs simply saying “yes” or “no” about each possib
 
 **Transition Table**
 
-<img src="https://s2.loli.net/2023/09/25/3sFkCmprPOjaqN7.png" alt="image.png" style="zoom:50%;" />
+{{<img src="https://s2.loli.net/2023/09/25/3sFkCmprPOjaqN7.png" alt="image.png" style="zoom:50%;" >}}
 
 **Acceptance of Input Strings**
 
@@ -417,21 +417,21 @@ The algorithm works recursively by splitting a regex into subexpressions, from w
 
 - Two basis rules: handle subexpressions with no operators
 
-  <img src="https://s2.loli.net/2023/09/25/pMlOHkGaq45ifB2.png" alt="image.png" style="zoom: 33%;" />
+  {{<img src="https://s2.loli.net/2023/09/25/pMlOHkGaq45ifB2.png" alt="image.png" style="zoom: 33%;" >}}
 
 - Three inductive rules: construct larger NFA’s from the smaller NFA’s for subexpressions
 
   - Union
 
-    <img src="https://s2.loli.net/2023/09/25/dGVNmClnbRIA8PJ.png" alt="image.png" style="zoom: 33%;" />
+    {{<img src="https://s2.loli.net/2023/09/25/dGVNmClnbRIA8PJ.png" alt="image.png" style="zoom: 33%;" >}}
 
   - Concatenation
 
-    <img src="https://s2.loli.net/2023/09/25/aLXCdiM1eEKwOZ9.png" alt="image.png" style="zoom:33%;" />
+    {{<img src="https://s2.loli.net/2023/09/25/aLXCdiM1eEKwOZ9.png" alt="image.png" style="zoom:33%;" >}}
 
   - Kleene Closure
 
-    <img src="https://s2.loli.net/2023/09/25/nDjpL8lB63obcd7.png" alt="image.png" style="zoom:33%;" />
+    {{<img src="https://s2.loli.net/2023/09/25/nDjpL8lB63obcd7.png" alt="image.png" style="zoom:33%;" >}}
 
 ### DFA’s for Lexical Analyzers
 
@@ -770,7 +770,7 @@ Grammar $G$, set of items $I$
 
 $\text{GOTO}(I,X)$ is defined to be the closure of the set of all items $[A\rightarrow \alpha X\cdot\beta]$, where $[A\rightarrow \alpha\cdot X\beta]$ is in $I$.
 
-<img src="https://s2.loli.net/2023/10/30/oQ9C7ZeFxlgnGVz.png" alt="image.png" style="zoom:50%;" />
+{{<img src="https://s2.loli.net/2023/10/30/oQ9C7ZeFxlgnGVz.png" alt="image.png" style="zoom:50%;" >}}
 
 ##### LR(0) Automaton
 
@@ -815,7 +815,7 @@ ACTION$[s_m,a_i]$
 
 2. State $i$ is constructed from $I_i$. ACTION can be determined as follows:
 
-   <img src="https://s2.loli.net/2023/10/30/Hzdupvr4iQgjnZ7.png" alt="image.png" style="zoom:50%;" />
+   {{<img src="https://s2.loli.net/2023/10/30/Hzdupvr4iQgjnZ7.png" alt="image.png" style="zoom:50%;" >}}
 
 3. The GOTO transitions for state $i$ are constructed for all nonterminals $A$ using the rule: If $\text{GOTO}(I_i,A)=I_j$, then $\text{GOTO}(i,A)=j$.
 
@@ -853,7 +853,7 @@ The core of an LR(1) item set is the set of the first components, a set of LR(0)
 
 Merging states may cause reduce/reduce conflicts:
 
-<img src="https://s2.loli.net/2023/11/06/uoc1pBe6k59AlbW.png" alt="image.png" style="zoom:50%;" />
+{{<img src="https://s2.loli.net/2023/11/06/uoc1pBe6k59AlbW.png" alt="image.png" style="zoom:50%;" >}}
 
 Merging states in LR(1) parsing table; If there is no reduce-reduce conflict, the grammar is LALR(1), otherwise not LALR(1).
 
@@ -879,7 +879,7 @@ Driver programs: $\text{CLR=LALR=SLR}$
 
 - Non-terminals in a parse tree may not correspond to proper language constructs
 
-<img src="https://s2.loli.net/2023/11/13/BYo6XWehN9zCcI8.png" alt="image.png" style="zoom:50%;" />
+{{<img src="https://s2.loli.net/2023/11/13/BYo6XWehN9zCcI8.png" alt="image.png" style="zoom:50%;" >}}
 
 ### Evaluation Orders for SDD’s
 
@@ -1041,7 +1041,7 @@ Consist of a list of pointers to triples.
 
 An optimization can move an instruction by reordering the instruction list.
 
-<img src="https://s2.loli.net/2023/11/20/8D9WbjlcOyYTNVG.png" alt="image.png" style="zoom:50%;" />
+{{<img src="https://s2.loli.net/2023/11/20/8D9WbjlcOyYTNVG.png" alt="image.png" style="zoom:50%;" >}}
 
 #### Static Single-Assignment Form
 
@@ -1408,7 +1408,7 @@ Use memory hierarchy to minimize the average memory-access time
 
 **Fragmentation**
 
-<img src="https://s2.loli.net/2023/12/04/2PFSER4gfVUXeDs.png" alt="image.png" style="zoom:33%;" />
+{{<img src="https://s2.loli.net/2023/12/04/2PFSER4gfVUXeDs.png" alt="image.png" style="zoom:33%;" >}}
 
 **Best-fit algorithm**
 
@@ -1420,7 +1420,7 @@ faster and improves spatial locality, but fragmentation
 
 **[The Doug Lea’s Strategy](https://cw.fel.cvut.cz/old/_media/courses/a4m33pal/04_dynamic_memory_v6.pdf)**
 
-<img src="https://s2.loli.net/2023/12/04/nXtKLFJpgyzlRPq.png" alt="image.png" style="zoom:50%;" />
+{{<img src="https://s2.loli.net/2023/12/04/nXtKLFJpgyzlRPq.png" alt="image.png" style="zoom:50%;" >}}
 
 ## Lecture 8 - Code Generation
 
@@ -1506,7 +1506,7 @@ Finding leader instructions:
 
 basic block: [leader instructions, min{next leader instructions, EOF}) 
 
-<img src="https://s2.loli.net/2023/12/11/znC6vQO8LWHBAmY.png" alt="image.png" style="zoom:50%;" />
+{{<img src="https://s2.loli.net/2023/12/11/znC6vQO8LWHBAmY.png" alt="image.png" style="zoom:50%;" >}}
 
 #### Loops
 
@@ -1630,7 +1630,7 @@ Pick the register requiring the smallest number of `ST` instructions.
 
 **Execution path**: sequence of points (within block / across block).
 
-<img src="https://s2.loli.net/2023/12/25/JalFPwqVXQy8Z6c.png" alt="image.png" style="zoom:50%;" />
+{{<img src="https://s2.loli.net/2023/12/25/JalFPwqVXQy8Z6c.png" alt="image.png" style="zoom:50%;" >}}
 
 Program execution can be viewed as a series of transformations of the program state (<u>the values of all variables, etc.</u>)
 
@@ -1682,7 +1682,7 @@ Generate a definition $d$ of variable $u$ and kill all other definitions of $u$.
 $$
 f_d(x) = \text{gen}_d\cup (x-\text{kill}_d)
 $$
-<img src="https://s2.loli.net/2023/12/25/IbRe8LCfOJYjKio.png" alt="image.png" style="zoom:50%;" />
+{{<img src="https://s2.loli.net/2023/12/25/IbRe8LCfOJYjKio.png" alt="image.png" style="zoom:50%;" >}}
 
 For a block $B$ with $n$ statements,
 $$

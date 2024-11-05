@@ -75,7 +75,7 @@ Use result immediately when it is computed.
 1. EXE - EXE
 2. MEM -EXE
 
-<img src="https://s2.loli.net/2023/04/17/OW7n6jlZKcD4Axh.png" alt="image.png" style="zoom:50%;" />
+{{<img src="https://s2.loli.net/2023/04/17/OW7n6jlZKcD4Axh.png" alt="image.png" style="zoom:50%;" >}}
 
 **Control Hazards**:
 
@@ -99,11 +99,11 @@ Predict outcome of branch, stall only if prediction is wrong.
 
   Hardware measures actual branch behavior,  e.g., record recent history of each branch. Assume future behavior will continue the trend.
 
-<img src="https://s2.loli.net/2023/04/24/1nft2JdaVygvQ8I.png" alt="image.png" style="zoom:50%;" />
+{{<img src="https://s2.loli.net/2023/04/24/1nft2JdaVygvQ8I.png" alt="image.png" style="zoom:50%;" >}}
 
 <center><b>The single-cycle diagram corresponding to 5-stage pipeline</b></center>
 
-<img src="https://s2.loli.net/2023/04/24/OVjJawHuYoDvltn.png" alt="image.png" style="zoom: 67%;" />
+{{<img src="https://s2.loli.net/2023/04/24/OVjJawHuYoDvltn.png" alt="image.png" style="zoom: 67%;" >}}
 
 <center><b>The datapath with controls to handle exceptions</b></center>
 
@@ -149,7 +149,7 @@ Two-issue packets
 - Type 1: ALU or branch instructions
 - Type 2: load or store instructions
 
-<img src="https://s2.loli.net/2023/04/24/DCy2gGsPjrAFYQU.png" alt="image.png" style="zoom: 50%;" />
+{{<img src="https://s2.loli.net/2023/04/24/DCy2gGsPjrAFYQU.png" alt="image.png" style="zoom: 50%;" >}}
 
 <center>
     <b>
@@ -194,7 +194,7 @@ bne $s1, $zero, Loop	 # branch $s1!=0
 - Allow the CPU to execute instructions out of order to avoid stalls
 - Commit result to registers in order
 
-<img src="https://s2.loli.net/2023/04/24/DurNiyhPfCMEjRd.png" alt="image.png" style="zoom:50%;" />
+{{<img src="https://s2.loli.net/2023/04/24/DurNiyhPfCMEjRd.png" alt="image.png" style="zoom:50%;" >}}
 
 <center>
     <b>
@@ -334,7 +334,7 @@ Double data rate (DDR) DRAM: Transfer on rising and falling clock edges
 
 **Direct Mapped Cache**
 
-<img src="https://img-blog.csdnimg.cn/b68ccbecb0514a988b83bcaf595b5ab3.png" style="zoom: 33%;" />
+{{<img src="https://img-blog.csdnimg.cn/b68ccbecb0514a988b83bcaf595b5ab3.png" style="zoom: 33%;" >}}
 
 | Word addr. | Bin addr. | Hit/Miss | Cache Block |
 | ---------- | --------- | -------- | ----------- |
@@ -413,7 +413,7 @@ Average memory access time $\text{AMAT} = \text{Hit time} + \text{Miss rate}\tim
 
 **Associative Cache**:
 
-<img src="https://s2.loli.net/2023/05/15/YKdln9urkxowtA8.png" alt="image.png" style="zoom:50%;" />
+{{<img src="https://s2.loli.net/2023/05/15/YKdln9urkxowtA8.png" alt="image.png" style="zoom:50%;" >}}
 
 Fully associative
 
@@ -486,7 +486,7 @@ TLB as "cache" of Page Table
 
 TLB: |V|D|R|Tag|Payload|, Payload(PTE): |V|D|R|PPN|
 
-<img src="https://s2.loli.net/2023/05/15/9fdke2HDvT6SEBz.png" alt="image.png" style="zoom:50%;" />
+{{<img src="https://s2.loli.net/2023/05/15/9fdke2HDvT6SEBz.png" alt="image.png" style="zoom:50%;" >}}
 
 **Sources of misses**:
 
@@ -555,7 +555,7 @@ S'ware: Concurrent vs. Sequential
 
 **Amdahl's Law**
 
-<img src="https://s2.loli.net/2023/06/05/yepcChQH6uzgGvW.png" alt="image.png" style="zoom:50%;" />
+{{<img src="https://s2.loli.net/2023/06/05/yepcChQH6uzgGvW.png" alt="image.png" style="zoom:50%;" >}}
 
 Strong scaling: fixed problem size, time is reverse proportional to number of processors
 
@@ -590,10 +590,10 @@ Simultaneous Multithreading(SMT)
 
 - All processors share one memory(uniform/non-uniform access speed)
 
-<img src="https://s2.loli.net/2023/05/29/ytTjZ41MOds2nbk.png" alt="image.png" style="zoom:50%;" />
+{{<img src="https://s2.loli.net/2023/05/29/ytTjZ41MOds2nbk.png" alt="image.png" style="zoom:50%;" >}}
 
 **Message Passing Multiprocessors**
 
 - Each processor has private physical address space
 
-<img src="https://s2.loli.net/2023/05/29/rYd6ktQLbiv8l9x.png" alt="image.png" style="zoom: 50%;" />
+{{<img src="https://s2.loli.net/2023/05/29/rYd6ktQLbiv8l9x.png" alt="image.png" style="zoom: 50%;" >}}

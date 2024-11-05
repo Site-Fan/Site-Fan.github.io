@@ -63,7 +63,7 @@ $$
 D(p \parallel q) = \sum\limits_{x\in\mathcal X}p(x)\log\frac {p(x)}{q(x)}
 $$
 
->$$
+$$
 D(p \parallel q) \ne D(q \parallel p)
 $$
 
@@ -83,7 +83,6 @@ I(X;Y) &= I(Y;X)\\
 I(X;X) &= H(X)
 \end{align*}
 $$
-
 **Conditional Mutual Information**:
 $$
 \begin{align*}
@@ -175,7 +174,6 @@ Random variables $\{X_n\}$ form a Markov chain $X_1\rightarrow\cdots\rightarrow 
 $$
 p(x_i|x_1,\dots,x_{i-1}) = p(x_i|x_i-1)
 $$
-
 > Properties
 >
 > - $X\rightarrow  Y\rightarrow Z\implies p(x,z|y)=p(x|y)p(z|y)$
@@ -216,7 +214,6 @@ $$
 1+P_e\log(|\mathcal X|-1) \ge H(X|Y)\\
 P_e \ge \frac{H(X|Y)-1}{\log |\mathcal X|-1}.
 $$
-
 > Corollaries
 >
 > For any two r.v. $X$ and $Y$, let $p=\text{Pr}[X\ne Y]$, $H(p)+p\log (|\mathcal X|-1)\ge H(X|Y)$.
@@ -248,8 +245,6 @@ A typical set $A_\epsilon^{(n)}$ contains all sequence realizations $(x_1,\dots,
 $$
 2^{-n(H(X)+\epsilon)}\le p(x_1,\dots,x_n) \le2^{-n(H(X)-\epsilon)}
 $$
-
-
 - If $(x_1,\dots,x_n)\in A_\epsilon^{(n)}$, then $H(X)-\epsilon\le -\frac 1 n \log p(x_1,\dots,x_n)\le H(X)+\epsilon$
 - $|A_\epsilon^{(n)}|\le 2^{n(H(X)+\epsilon)}$
 - If $n$ is sufficiently large,
@@ -264,6 +259,8 @@ $$
 for $n$ sufficiently large.
 
 ## Chapter 5: Source Coding
+
+### Chapter 5-1
 
 Goal: develop practical lossless coding algorithms approaching(achieving) the best achievable data compression $H(X)$.
 
@@ -280,3 +277,9 @@ $$
 Conversely, given a set of codeword lengths satisfying this inequality, there exists a prefix code with these codeword lengths.
 
 Proof: $\sum\limits_i D^{\mathscr l_{\max}-\mathscr l_i}\le D ^{\mathscr l_\max} \implies \sum\limits_i D^{-\mathscr l_i} \le 1$
+
+### Chapter 5-2
+
+{{< img src="https://s2.loli.net/2023/01/01/8pS9IbAPfWXDOgt.png" style="zoom:25%;"  >}}
+
+### Chapter 5-3 - Huffman Code
