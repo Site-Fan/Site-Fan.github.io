@@ -20,6 +20,13 @@ module.exports = {
         'sans': ['Ubuntu', '"Inter"', '-apple-system', 'BlinkMacSystemFont', 'avenir next', 'avenir', 'segoe ui', 'helvetica neue', 'helvetica', 'Cantarell', 'roboto', 'noto', 'arial', 'sans-serif'],
       },
     },
+	screen: {
+		'sm': '640px',
+		'md': '768px',
+		'lg': '1024px',
+		'xl': '1280px',
+		'2xl': '1536px',
+	},
   },
   plugins: [],
   variants: ['group-hover'],
