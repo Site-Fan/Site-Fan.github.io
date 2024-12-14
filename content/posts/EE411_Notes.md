@@ -280,6 +280,12 @@ Proof: $\sum\limits_i D^{\mathscr l_{\max}-\mathscr l_i}\le D ^{\mathscr l_\max}
 
 ### Chapter 5-2
 
-{{< img src="https://s2.loli.net/2023/01/01/8pS9IbAPfWXDOgt.png" style="zoom:25%;"  >}}
+{{<raw>}}<center><img src="https://s2.loli.net/2023/01/01/8pS9IbAPfWXDOgt.png" style="zoom:25%;" /></center>{{</raw>}}
+
+
 
 ### Chapter 5-3 - Huffman Code
+
+[CS217 DSAA: Huffman Tree construction]( {{<relref "cs217_dsaa_final.md#Tree">}} )
+
+[Detailed proof of optimality](http://home.cse.ust.hk/faculty/golin/COMP271Sp03/Notes/MyL17.pdf)

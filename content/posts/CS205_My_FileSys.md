@@ -1,3 +1,11 @@
+---
+title: CS219 Assignment - It's MyFS!!!!!
+tags: C/C++
+categories: CS
+description: Assignment 3-1 for CS219 Advanced Computer Program Design, 2024 Fall
+date: 2024-11-03
+---
+
 ## Background
 
 You, Togawa Sakiko, an operations engineer at Bushiroad Inc., are busy preparing files and materials for the upcoming *MyGO!!!!!×Ave Mujica* joint live show. At work, your colleagues see you as a hard-working workaholic. What they don’t know is your secret: you’re also Oblivionis, the keyboardist for *Ave Mujica*.
@@ -73,7 +81,7 @@ For the next $T$ lines, each line is a command to be executed in sequential orde
 - `echo`
   - Repeat the following arguments, used as input source of files in this question.
   - Number of args: 1 or 3
-    - The 1st argument stands for the content to be echoed, quoted by `''`.
+    - The 1st argument stands for the content to be echoed, quoted by `''` or not quoted.
     - If applicable, the 2nd argument could be `>` or `>>`, which is the [redirection operator](https://www.gnu.org/software/bash/manual/html_node/Redirections.html).
     - The 3rd argument states a path in the file system.
   - If the file given does not exist in that path, but its parent directory exists, create a new file there instead; if its parent directory also does not exist, throw an error.
@@ -98,7 +106,7 @@ For the next $T$ lines, each line is a command to be executed in sequential orde
   - Number of args: 2
     - The 1st argument is the path of the source file/directory
     - The 2nd argument is the path of the destination, when it ends with `/`, meaning moving source under this destination directory.
-
+  - We guarantee that the testcases will not move the working directory or its parent directories.
 - `rm`
   - Remove (unlink) the FILE(s).
   - Number of args: 1 or 2
@@ -106,10 +114,10 @@ For the next $T$ lines, each line is a command to be executed in sequential orde
     - If 2 arguments received, the 1st one is `-r`, the 2nd one states a path to a directory in the file system.
   - We guarantee that the testcases will not delete the working directory or its parent directories.
 - `pwd`
-  - print the name of the current working directory.
+  - print the absolute path of the current working directory.
   - Number of args: 0
 
-\* Note that "path" mentioned above could be either relative or absolute path, meaning that you need to maintain the path of the current working directory.
+\* Note that "path" mentioned above could be either relative or absolute path, meaning that you need to maintain the path of the current working directory. Initially, the current working directory is the root directory `/`.
 
 ## Output
 
@@ -132,18 +140,17 @@ In a single testcase, for each input instruction, generate necessary output to s
   - Output nothing unless any error occurs.
 - `mv`
   - Output nothing unless any error occurs.
-
 - `rm`
   - Output nothing unless any error occurs.
 - `pwd`
   - Output the absolute path of current working directory
 - For all types of errors, just output `error` in a single line:
-  - wrong number of arguments, like missing or too-many arguments
-  - invalid arguments, like `find whatever -wrong argument `
-  - accessing files/directories that does not exist
+  - wrong number of arguments, like missing or too-many arguments.
+  - invalid arguments, like `find whatever -wrong argument `.
+  - accessing files/directories that does not exist.
   - wrong path, like `cd` into a **file path** or `echo` into a **directory path** etc.
-  - name conflict, like making/renaming a 
-  - other possible errors
+  - name conflict, like making/renaming a file to the name of an existing file.
+  - other possible errors.
 
 ## Sample Input #1
 
@@ -158,7 +165,7 @@ echo 'Kajikanda kokoro furueru manazashi' > Haruhikage
 echo 'Sekai de boku wa hitoribocchi datta' >> ./Haruhikage
 echo 'Chiru koto shika shiranai haru wa' >> ../../Live20250426/songs/Haruhikage
 echo 'Maitoshi tsumetaku ashirau' >> /BanGDream/MyGO/Live20250426/songs/Haruhikage
-find /BanGDream -name 'Haru*'
+find /BanGDream -name 'Haru.*'
 mkdir -p /BanGDream/CRYCHIC/songs
 cd /BanGDream/CRYCHIC/songs
 mv /BanGDream/MyGO/Live20250426/songs/Haruhikage ./
@@ -166,8 +173,9 @@ ls -a .
 cat Haruhikage
 cd /BanGDream
 rm -r ./CRYCHIC
-find /BanGDream -name 'Haru*'
+find /BanGDream -name 'Haru.*'
 echo 'Haruhikage deleted'
+cd CRYCHIC
 ```
 
 ## Sample Output #1
@@ -182,14 +190,41 @@ Sekai de boku wa hitoribocchi datta
 Chiru koto shika shiranai haru wa
 Maitoshi tsumetaku ashirau
 Haruhikage deleted
+error
 ```
 
 ## Testcases
 
-To be determined.
+There are 20 testcases in total, each takes up 5 points. You are encouraged to implement part of the functions and submit your semi-finished code to test if the implemented part works correctly. For testcase 1-18, we guarantee that no errors happen. You don't need to worry about the efficiency too much, simple depth-first-search is all you need for `find`.
+
+| Testcase No. |           Commands used            | $\mathtt T \le$ |                Description                 |
+| :----------: | :--------------------------------: | :-------------: | :----------------------------------------: |
+|      1       |             echo, cat              |       1e4       |                                            |
+|      2       |           mkdir, cd, pwd           |       1e4       |            Absolute paths only             |
+|      3       |           mkdir, cd, pwd           |       1e4       |          Relative/absolute paths           |
+|      4       |    cat, cd, echo, ls, mkdir, rm    |       1e3       |                                            |
+|      5       |    cat, cd, echo, ls, mkdir, rm    |       1e4       |                                            |
+|      6       |    cat, cd, echo, ls, mkdir, mv    |       1e3       |                                            |
+|      7       |    cat, cd, echo, ls, mkdir, mv    |       1e4       |                                            |
+|      8       |   cat, cd, echo, ls, mkdir, find   |       1e3       |                                            |
+|      9       |   cat, cd, echo, ls, mkdir, find   |       1e4       |                                            |
+|      10      |  cat, cd, echo, ls, mkdir, rm, mv  |       1e5       |                                            |
+|      11      | cat, cd, echo, ls, mkdir, rm, find |       1e5       |                                            |
+|      12      | cat, cd, echo, ls, mkdir, mv, find |       1e4       |                                            |
+|      13      |      Mixture of all above - 1      |       1e3       |                                            |
+|      14      |      Mixture of all above - 2      |       1e3       |                                            |
+|      15      |      Mixture of all above - 3      |       1e4       |                                            |
+|      16      |      Mixture of all above - 4      |       1e4       |                                            |
+|      17      |       mkdir, echo, find, rm        |       2e4       |         Efficiency test of `find`          |
+|      18      |        cd, mkdir, echo, rm         |       1e4       |          Memory leak test of `rm`          |
+|      19      | Mixture of all above - 3(with err) |       1e4       |           Arguments can be wrong           |
+|      20      | Mixture of all above - 4(with err) |       1e4       | Paths, names and dependencies can be wrong |
+
+Note that some of the testcases contain only part of the commands, so don't hesitate to submit and see if your implementation of that part is correct (even if you have not implemented all types of commands)!
 
 ## Hints
 
+- Note that there are many details about the path format, for example, the path of a directory **may** ends with `/`, but some times this slash could be omitted.
 - Descriptions and documents for most of the commands above can be found at [GNU Coreutils](https://www.gnu.org/software/coreutils/manual/html_node/index.html).
 - For regular expressions of `find` commands, try [regular expression library](https://en.cppreference.com/w/cpp/regex) since C++11.
 
@@ -197,34 +232,5 @@ To be determined.
 
 - Be careful when handling with memory allocation. Not properly Allocating, accessing and releasing resources will lead to various runtime errors and memory-limit-exceeded errors.
 
-A C++ template for your reference, implementing it with C will be more challenging for memory management.
-
-```cpp
-class myfs_element {
-public:
-    std::string name;
-
-    myfs_element(const std::string& name);
-
-    virtual ~myfs_element() {}
-
-    virtual void display(int indent = 0) const = 0;
-};
-
-class mydir : public myfs_element {
-public:
-    std::vector<std::shared_ptr<myfs_element>> members;
-
-    mydir(const std::string& name);
-
-    void add_member(std::shared_ptr<myfs_element> element);
-};
-
-class myfile : public myfs_element {
-public:
-    std::string content;
-
-    myfile(const std::string& name, const std::string& content);
-};
-```
+Implementing this using C++ with derived classes and smart pointers is easier than using C. However, you are still encouraged to give it a try. I believe that no matter how much you know about UNIX, memory and pointers before, you can be a master of them after solving this problem ;)
 

@@ -260,7 +260,7 @@ KMP $O(m+n)$
 
 {{<img src="https://s2.loli.net/2023/01/07/kxRLO5YAUwJXFj2.png" alt="image.png" style="zoom:50%;" >}}
 
-## Tree
+## Tree{#Tree}
 
 Internal nodes, leaf nodes, root
 

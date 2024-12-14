@@ -1,5 +1,5 @@
 ---
-title: Set Up a Hadoop Cluster From Scratch
+title: Set up a Hadoop Cluster from Scratch
 tags: Distributed System
 categories: CS
 description: Tutorial for setting up a hadoop cluster with ZKFC and YARN over Docker.

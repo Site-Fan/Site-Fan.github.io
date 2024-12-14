@@ -14,7 +14,9 @@ date: 2024-09-09
 - Lecture 4: ARM Assembly
 - Lecture 5: Interrupt
 - Lecture 6: UART
-- Lecture 7: 
+- Lecture 7: Timer Intro
+- Lecture 8: Timer Advanced
+- Lecture 9: I²C and SPI
 
 ## Lecture 2: STM32 MCU & GPIO
 
@@ -219,3 +221,67 @@ Interrupts are managed by Nested Vectored Interrupt Controller (`NVIC`)
 - Reset has highest priority
 
 ## Lecture 6: UART
+
+{{<raw>}}<center><img src="http://localhost:1313/img/cont.png" style="zoom: 25%;" /></center>{{</raw>}}
+
+## Lecture 7: Timer Intro
+
+{{<raw>}}<center><img src="http://localhost:1313/img/cont.png" style="zoom: 25%;" /></center>{{</raw>}}
+
+## Lecture 8: Timer Advanced
+
+{{<raw>}}<center><img src="http://localhost:1313/img/cont.png" style="zoom: 25%;" /></center>{{</raw>}}
+
+## Lecture 9: I²C and SPI
+
+### **Inter-Integrated Circuit (I²C)**
+
+Designed for low-cost, medium data rate applications
+
+- 2-wire communications
+- Synchronous, half-duplex
+- Start/Stop/Acknowledgment mechanism
+- Serial, byte-oriented
+- Multi-master, multi-slave
+- Two bidirectional open-drain lines, plus ground
+  - Serial Data Line (SDA)
+  - Serial Clock Line (SCL)
+- Up to 100 kbit/s in the standard mode, up to 400 kbit/s in the fast mode
+
+**Start/Stop Signals**
+
+- START (S)
+  - SDA 1->0 when SCL = 1
+- STOP (P)
+  - SDA 0->1 when SCL = 1
+- Repeated Start (Sr)
+- Bus state
+  - Busy: [S, P]
+  - Free: (P, S)
+
+**Data frame**
+
+- Data bits are transferred after S
+- 1 frame = 8 data bits + 1 ack bit
+- MSB first
+- address as data: 7 bits address, 1 bit R/W (to slave)
+
+```python
+# Master sends data to slave
+|S|Address|0|   |Data|   |Data|        |P|
+            |Ack|    |Ack|    |Ack/Nack|
+# Slave sends data to Master
+|S|Address|1|   |    |Ack|Data|Ack/Nack|P|
+            |Ack|Data|   |Data|
+# Repeated Start
+|S|Address|0|   |Data|   |Data|        |Sr|Address|1|   |...
+            |Ack|    |Ack|    |Ack/Nack|            |Ack|...
+```
+
+### Serial Peripheral Interface (SPI)
+
+- Synchronous full-duplex communication
+- Single master, multiple slaves
+- No Start/Stop or slave acknowledgment
+- Master sets corresponding SS signal to communicate with slave device
+- More than 10 Mbit/s 

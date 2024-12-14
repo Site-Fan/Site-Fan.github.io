@@ -16,8 +16,8 @@ I am a Senior Undergraduate at the [Southern University of Science and Technolog
 
 Recently, I have been working on: 
 
-- Enhancing the availability of datacenter software, in collaboration with [Yi](https://chenyi.world/) from Order Lab.
 - Implementing subgraph matching algorithms for dynamic graphs on GPU at HPC Lab.
+- Continuous work of LiteSys, focusing on enhancing the availability and service continuity of datacenter software.
 
 For more information, please refer to my [CV](./CV_Site_Fan.pdf).
 
@@ -37,8 +37,8 @@ My primary research focus involves **building reliable and efficient systems**, 
 <strong>GPU-based Parallel Subgraph Counting and Listing over Dynamic Graphs</strong><ul><li><b>Research Intern</b> at HPC Lab, SUSTech; Collaborating with Ant Group</li><li>Implemented subgraph counting and listing algorithms for dynamic graphs on GPU</li><li>Leveraging GPMA/LPMA as data structures for dynamic graph storage and updates.</li></ul>
 {{< /alert >}}
 
-{{< alert info "" >}}
-<strong>LiteSys: Achieving Cost-Effective Service Continuity for Datacenter Software</strong><ul><li><b>Research Intern</b> at Order Lab, University of Michigan</li><li>Developed a cost-effective framework for datacenter software to preserve availability during incidents without the resource-intensive demands of full replication.</li><li>Preparing for submission to <a href = "https://www.usenix.org/conference/osdi25">OSDI' 25</a>.</li></ul>
+{{< alert success "" >}}
+<strong>LiteSys: Achieving Cost-Effective Service Continuity for Datacenter Software</strong><ul><li><b>Research Intern</b> at Order Lab, University of Michigan</li><li>Developed a cost-effective framework for datacenter software to preserve availability during incidents without the resource-intensive demands of full replication.</li><li>Under submission to <a href = "https://www.usenix.org/conference/osdi25">OSDI' 25 </a>as the second author.</li></ul>
 {{< /alert >}}
 
 {{< alert success "" >}}
@@ -46,10 +46,10 @@ My primary research focus involves **building reliable and efficient systems**, 
 {{< /alert >}}
 
 {{< alert success "" >}}
-<strong>EvoX: Distributed GPU-based Framework of Scalable Evolutionary Computing</strong><ul><li><b>Research Intern</b> at EMI Group, SUSTech</li><li>Implemented multi-object optimization algorithms NSGA3 and LMOCSO for EvoX.</li><li>EvoX offers a comprehensive suite of 50+ evolutionary algorithms and a wide range of 100+ benchmark problems/environments: <a href=https://github.com/EMI-Group/evox>github.com/EMI-Group/evox</a>.</li></ul>
+<strong>EvoX: Distributed GPU-based Framework of Scalable Evolutionary Computing</strong><ul><li><b>Research Intern</b> at EMI Group, SUSTech</li><li>Implemented multi-object optimization algorithms NSGA-III and LMOCSO for EvoX.</li><li>EvoX offers a comprehensive suite of 50+ evolutionary algorithms and a wide range of 100+ benchmark problems/environments: <a href=https://github.com/EMI-Group/evox>github.com/EMI-Group/evox</a>.</li></ul>
 {{< /alert >}}
 
-## Activities
+## Teaching & Activities
 
 ### Teaching Assistant of *Advanced Computer Program Design* 
 
@@ -61,9 +61,14 @@ My primary research focus involves **building reliable and efficient systems**, 
 - Responsible for lab sessions and quiz / assignment / project design.
 - Provided a solid understanding of C and C++, along with practical experience in Linux through lectures and programming tasks/projects.
 
+### Teaching Assistant of *Advanced Database Summer Workshop*
+
+- Responsible for assisting Mr. Stéphane Faroult and translation in lab sessions.
+- Covering the latest industrial techniques and hands-on lab experience in advanced database development.
+
 ### President(Monitor) of *2021 Turing Class*
 
-- Responsible organizing activities for Turing class, following up on research and coursework progress, and assisting and communicating with faculty.
+- Responsible for organizing activities for Turing class, following up on research and coursework progress, and assisting and communicating with faculty.
 
 ## [Contact Me](./contact)
 
