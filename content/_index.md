@@ -47,7 +47,7 @@ My primary research focus involves **building reliable and efficient systems**, 
 
 - B.Eng. Candidate in Computer Science and Engineering, *2021.09 - Expected 2025.06*
 - GPA: 3.92/4.00, ranking top 1 with an honored degree from the 2021 Turing Class.
-- 2023 National Scholarship, 2022-2024 Outstanding Student Scholarships, 2023 Top 10 etc.
+- 2023 National Scholarship, 2022-2024 Outstanding Student Scholarships, 2023 Top 10 Outstanding Volunteers etc.
 
 ## Teaching & Activities
 

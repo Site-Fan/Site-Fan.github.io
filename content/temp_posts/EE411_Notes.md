@@ -1,5 +1,6 @@
 ---
 title: EE411 Information Theory and Coding
+tags: Information Theory
 categories: CS
 description: Notes for information theory and coding
 date: 2024-09-24
