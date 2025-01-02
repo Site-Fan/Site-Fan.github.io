@@ -1,5 +1,5 @@
 ---
-title: CS301 Embedded System and Microcomputer Principle
+title: CS301 Embedded System and Microcomputer Principle Review
 tags: [Embedded System]
 categories: CS
 description: Review notes for Embedded System and Microcomputer Principle, in reverse order
@@ -10,12 +10,18 @@ date: 2024-12-31
 
 1. Introduction
 2. STM32 MCU & GPIO
-3. I²C and SPI
-4. SD Card and File System
-5. Bus
-6. ADC
-7. DMA and Pipeline
-8. Arithmetic
+3. C for Embedded System
+4. ARM Assembly
+5. Interrupt
+6. UART
+7. Timer Introduction
+8. Advanced Timer Functionality
+9. I²C and SPI
+10. SD Card and File System
+11. Bus
+12. ADC
+13. DMA and Pipeline
+14. Arithmetic
 
 ## Lecture 14 Arithmetic
 
@@ -425,7 +431,7 @@ AMBA2.0->AHB->ARM Cortex-M
 - compatibility
 - well supported
 
-**Advanced High-performance Bus **(AHB)
+**Advanced High-performance Bus** (AHB)
 
 - high performance
 - CPU<->High-speed memory<->DMA controllers
@@ -810,7 +816,315 @@ $$
 T = \frac{(\text{TIMx_ARR}+1) \times (\text{TIMx_PSC}+1)}{f_\text{CK_PSC}}
 $$
 
+## Lecture 6 Serial Communication - UART
 
+### UART Protocol
+
+Communication Classification
+
+- Serial
+  - Low rate, high anti-interference ability, long distance, low I/O usage, cheap
+- Parallel
+  - High rate, low anti-interference ability, short distance, high I/O usage, expensive
+- Synchronous
+  - Master-slave 
+  - Shares the same clock signal sent with data
+- Asynchronous
+  - Fewer wires, w/o clock signal
+  - relies on synchronous signals like stop/stop bits within the data signal
+- Simplex
+  - unidirectional
+- Half-duplex
+  - bidirectional but time-division
+- Full-duplex
+  - bidirectional at any time
+
+Universal Asynchronous Receiver-Transmitter(UART)
+
+- Serial, asynchronous, full-duplex
+- Start (1-bit) + Data  (8-bit) + Parity (0-1 bit) + Stop (1 bit)
+- Start: 0, Stop: 1, LSB of the data transferred first.
+
+**Baud Rate**
+
+In UART, Baud rate = bits per second
+
+data rate = Baud rate \* 8/(1+8+(0/1)+1)
+
+Start, Stop, Parity are the protocol overhead
+
+### UART in Practice
+
+**Synchronization**
+
+Different clocks of transmitter and receiver may have different phases.
+
+Assuming the receiver samples in the middle of its cycle. W/o the parity bit, the final sample is taken 9.5 periods after the initial falling edge and must lie within the stop bit.
+
+The overall permissible error is therefore about ±0.5 bit period in 9.5 period or (about) ±5%. Both transmitter and receiver may have errors, therefore about ±2.5% for both the transmitter and the receiver.
+
+**Bit-level Reorganization**
+
+After the cable propagation, the signal may be interfered and has glitches.
+
+Solution: *oversampling*
+
+- receiver sampling clock 16x faster than the Baud rate
+- 3 out of 16 are picked for voting
+- 2:1 determines the bit level
+- 1:1:1 sets the noise flag
+
+**Error detection**: data + parity bit for 1-bit error
+
+UART, as a communication mechanism, defines only the timing sequence, but does not specify the electrical characteristics of the interface.
+
+*RS-232* and *RS-485* defines the electrical and mechanical characteristics of the interface for serial communication.
+
+### USART in STM32
+
+Universal Synchronous/Asynchronous Receiver-Transmitter
+
+- generate data frame timing based on a byte of data
+- send through TX, receive data frame timing from RX
+- built-in Baud rate generator
+- configurable data length, stop length and optional parity bit
+
+| Register Name |    Offset     | Description          |
+| :-----------: | :-----------: | -------------------- |
+|   USARTx_SR   |    0x0000     | Status register      |
+|   USARTx_DR   |    0x0004     | Data register        |
+|  USARTx_BRR   |    0x0008     | Baud rate register   |
+| USARTx_CR1-3  | 0x000C-0x0014 | Control register 1-3 |
+
+`USART_BRR`
+
+- [15:4] DIV_Mantissa
+- [3:0] DIV_Fraction
+
+$$
+\text{baud} = \frac{f_\text{PCLK}}{16\times \text{USARTDIV}}\\
+\text{USARTDIV}=\text{DIV_Mantissa} + \text{DIV_Fraction/16}
+$$
+
+\* Note that when calculating `DIV_Fraction`, ceiling rounding is used. Handle carefully about the carry of $16\times \text{Fraction}$ into the Mantissa part.
+
+## Lecture 5 Interrupt
+
+### Subroutine
+
+Conditional branch: B (BL, BX when calling subroutine)
+
+Unconditional branch: BCS, BEQ, BGE etc.
+
+**Subroutine**
+
+1. Branch and link (BL): call a subroutine, save the return address (address of the instruction after BL) in the link register (LR)
+2. Branch with exchange (BX): branch to the address specified in a register. The processor copies LR to PC after the program is finished.
+
+**Stack**
+
+- FILO
+- Used for nested branch and link
+- Cortex-M uses full descending stack:
+  - Bottom address fixed
+  - SP points to the stack top item
+  - Grows towards lower address: decrement on push, increment on pop
+- STMFD/LDMFD: store/load multiple full descending
+- store: decrement SP, store; load: load, increment SP
+- Largest-numbered register pushed first, popped last
+
+### Interrupt
+
+Polling
+
+- Periodic/continuous checking of external events
+- CPU processing time consuming
+- Combined with other functional code
+- Events might be missed
+
+Interrupt
+
+- Hardware-based event detection
+- A dedicated Interrupt Service Routine (ISR) is used to handle the event
+
+1. Finish the current instruction
+2. Save return address and register context to stack
+3. Invoke ISR
+4. Restore return address and register context from stack
+5. Resume main program
+
+Hardware automatically pushes and pops 8 registers onto/from the stack: `xPSP`, `PC`, `LR`, `r12`, `r3`, `r2`, `r1`, `r0`.
+
+**Interrupt Service Routines**
+
+- Each interrupt has an ISR
+
+- Invoked by hardware at unpredictable time, not by the control of the program's logic
+- An Interrupt Vector Table stored in memory contains fixed, pre-defined addresses of the ISRs.
+
+**Types of Interrupts**
+
+- Interrupts from peripheral modules
+- External pin interrupts (IRQ0-IRQ15)
+- Software interrupts
+- Non Maskable Interrupts
+
+Interrupts are managed by nested vectored interrupt controller (NVIC).
+
+NVIC receives interrupts requests from various sources
+
+- `AIRCR`: set priority group
+- `IPRx`: set priority value (priority of Reset, HardFault and NMI fixed, others adjustable)
+- `ISER/ICER`: enable/disable interrupts
+
+**Interrupt Priority**
+
+The smaller, the higher. Reset has the highest priority.
+
+preempt priority > sub-priority > natural priority
+
+| Priority Group | AIRCR[10:8] | IPRx[7:4]         | Result                     |
+| -------------- | ----------- | ----------------- | -------------------------- |
+| 0              | 111         | / : [7 : 4]       | 0 preempt, 4 sub           |
+| 1              | 110         | [7] : [6 : 4]     | 1 preempt, 3 sub           |
+| 2              | 101         | [7 : 6] : [5 : 4] | 2 preempt, 2 sub (default) |
+| 3              | 100         | [7 : 5] : [4]     | 3 preempt, 1 sub           |
+| 4              | 011         | [7 : 4] : /       | 4 preempt, 0 sub           |
+
+```c
+IPRn:
+ 31        27       23        19       15        11       7       3      0
+|IRQ(4n+3)|Reserved|IRQ(4n+2)|Reserved|IRQ(4n+1)|Reserved|IRQ(4n)|Reserved|
+```
+
+| Subroutine                                         | Interrupt                             |
+| -------------------------------------------------- | ------------------------------------- |
+| Jumps to any destination                           | Jumps to a fixed location             |
+| BL used by the program in the instruction sequence | Hardware interrupt occurs at any time |
+| Cannot be masked                                   | Can be masked(disabled)               |
+| Saves only LR                                      | Saves 8 registers                     |
+| CPU mode unchanged                                 | CPU goes to Handler mode              |
+| On return, restores LR to PC                       | On return restores 8 registers        |
+
+## Lecture 4 ARM Assembly
+
+Mnemonic -> Machine Code -> In-memory instructions
+
+````text
+label	opcode	operand1	operand2	operand3	; comments
+````
+
+- Arithmetic and logic
+- Data movement
+- Compare and branch
+
+### Arithmetic
+
+- ADD
+- SUB
+- RSB (reversed sub)
+- MUL (result \& 0xFFFFFFFF)
+
+**Condition Flags**
+
+- Negative
+
+  N = 1 if MSB = 1
+
+- Zero
+
+  Z = 1 if all bits of result are 0
+
+- Carry
+
+  - Unsigned addition: C = 1 if carry
+  - Unsigned subtraction: C = 0 if borrow
+  - Shift/Rotate: C = last bit shifted out
+
+- Overflow
+
+  V = 1 if P + P = N or N + N = P in signed arithmetic operations
+
+Most instructions update NZCV flags only if `S` suffix is present.
+
+Some instructions without a destination register like `CMP`, update NZCV flags even if no `S` specified.
+
+### Logic
+
+- AND
+- ORR
+- EOR
+- BIC
+- LSL
+- LSR
+- ROR
+
+### Data Transfer
+
+- MOV
+- MVN
+- LDR
+- STR
+
+**Endianness**: Cortex-M uses little endian by default, but adjustable.
+
+### Branch and Compare
+
+- CMP
+- BNE
+- BEQ
+- BGT, BGE, BLT, BLE
+- BHI, BHS, BLO, BLS
+
+### Addressing Mode
+
+- Register addressing
+  - MOV R0, R1
+- Immediate addressing
+  - Mov R0, #0x42
+  - Immediate value <= 0x0FFF (12-bit)
+  - immediate = imm\_8 ROR (2 * rotate_imm)
+- Indirect addressing
+  - No-update: LDR r6, [r11, #12]
+  - Pre-index: LDR r6, [r11, #12]!
+  - Post-index: LDR r6, [r11], #12
+- Register addressing
+  - STR R0, [R1]
+
+| Complex Instruction Set Computer                             | Reduced Instruction Set Computer                             |
+| ------------------------------------------------------------ | ------------------------------------------------------------ |
+| Complicated CPU                                              | Simple CPU                                                   |
+| Slower instruction execution                                 | Faster instruction execution                                 |
+| Fewer machine code instructions for each high-level instruction | More machine code instructions for each high-level instruction |
+| Good code density                                            | Poor code density                                            |
+| Smaller semantic gap                                         | Larger semantic gap                                          |
+| Simple compiler                                              | Complicated compiler                                         |
+
+## Lecture 3 C for Embedded System
+
+`switch` is better than `if-else` if the number of branches is large.
+
+Function vs. Macro: compare $T_\text{overhead}$ and $T_\text{execute}$
+
+**Storage class in C**
+
+- `auto`
+  - Default storage class for variables declared inside a function
+  - Accessible only within the function's scope
+- `register`
+  - Suggests storing variables in CPU registers
+  - Same accessibility as auto, allocation depends on the compiler 
+- `static`
+  - Lifetime throughout the program's duration
+  - Accessibility depends on declaration context
+  - Static variables inside functions are initialized only once
+- `extern`
+  - Makes variables accessible across multiple functions and files.
+  - Can be modified by any function within its scope.
+
+Volatile: variable value may change outside the normal program flow
+
+In practice: auto > global, stack > heap
 
 ## Lecture 2 STM32 MCU & GPIO
 
@@ -868,6 +1182,121 @@ ARM Cortex-M3 Register Bank
 | Link Register           | R14    | Return address of function calls                   |
 | Program Counter         | R15    | Address of the instruction to be executed          |
 | Program Status Register | CPSR   | Flags of the ALU result                            |
+
+**Memory Map**: STM32 maps its memory into 8 blocks of 512 MB
+
+```
+0xFFFFFFFF
+	Vendor-sprcific, Private peripheral bus - External/Internal
+0xE0000000
+	External device (1.0 GB)
+0XA0000000
+	External RAM (1.0 GB)
+0X60000000
+	Peripheral (0.5 GB)
+0X40000000
+	SRAM (0.5 GB)
+0X20000000
+	Code (0.5 GB)
+0X00000000
+```
+
+**Memory Mapped IO**
+
+- A technique where both memory and I/O devices use the same address space
+- The CPU treats I/O devices like computer memory and communicates with either computer memory or I/O devices.
+
+### GPIO
+
+GPIO (General Purpose Input Output) pins are commonly used pins that can control the voltage levels (high or low) and can be read from or written to.
+
+Processor accesses peripheral registers via **memory mapped I/O**
+
+```
+GPIO Port A: 0x4001 0400 - 0x4001 07FF
+GPIO Port B: 0x4001 0800 - 0x4001 0BFF
+...
+GPIO Port G: 0x4001 2000 - 0x4001 23FF
+```
+
+Each port has seven I/O registers associated with it, each register has a specific memory address, Register Mapping assigned a name to each register address.
+
+```
+GPIOA_LCKR	0x4001 0818
+GPIOA_BRR	0x4001 0814
+GPIOA_BSRR	0x4001 0810
+GPIOA_ODR	0x4001 080C
+GPIOA_IDR	0x4001 0808
+GPIOA_CRH	0x4001 0804
+GPIOA_CRL	0x4001 0800
+```
+
+**GPIO Mode**
+
+| GPIO Mode                                | Usage                                                        |
+| ---------------------------------------- | ------------------------------------------------------------ |
+| **Floating input (reset state)**         | Completely floating, and the state is undefined              |
+| **Input with pull-up**                   | With internal pull-up, defaults to high level (button)       |
+| **Input with pull-down**                 | With internal pull-down, defaults to low level               |
+| **Analog mode**                          | ADC, DAC                                                     |
+| **General purpose output Open-drain**    | Software I2C, SDA, SCL, etc                                  |
+| **General purpose output push-pull**     | Strong driving capability, general-purpose output (LED)      |
+| **Alternate function output Open-drain** | On-chip peripheral functions (hardware I2C, SDA, SCL pins, etc) |
+| **Alternate function output Push-pull**  | On-chip peripheral functions (SPI, SCK, MISO, MOSI pins, etc) |
+
+**GPIO Output Speed**
+
+- Speed of rising and falling
+- Low, medium, fast, high
+- High GPIO speed increase EMI noise and power consumption
+- High for SPI, low for LED toggling
+
+**GPIO Programming**
+
+1. Enable the corresponding GPIO clock
+
+   RCC->APB2ENR (GPIO is on APB2 bus)
+
+2. Configure the GPIO mode
+
+   Setting CRL/CRH to configure input/output mode
+
+3. Set the input/output status
+
+   - Set ODR to configure pull-up/pull-down input, reading from IDR to get input status
+   - Set ODR to configure output status
+
+**CRL and CRH**(configuration registers)
+
+{{<raw>}}<center><img src="https://s2.loli.net/2025/01/02/CURqFrZ2eyD7GIS.png" alt="image.png" style="zoom:50%;" /></center>{{</raw>}}
+
+Each GPIO pin is configured using 4 bits in CRL/CRH: `CNFx` an `MODEx`
+
+Input:
+
+- MODEx=0b00
+
+  | CNFx | Configuration                | Description                              |
+  | ---- | ---------------------------- | ---------------------------------------- |
+  | 00   | Analog                       | Select the pin as an ADC input           |
+  | 01   | Floating input               | High impedance                           |
+  | 10   | Input with pull-up/pull-down | `ODR` 0 for pull-down, otherwise pull-up |
+  | 11   | reserved                     | /                                        |
+
+Output
+
+- Modex>0b00, 10MHz, 2MHz, 50MHz
+
+  | CNFx | Configuration                        |
+  | ---- | ------------------------------------ |
+  | 00   | General purpose output push-pull     |
+  | 01   | General purpose output open-drain    |
+  | 10   | Alternate function output push-pull  |
+  | 11   | Alternate function output open-drain |
+
+Higher 16 bits  of IDR/ODR reserved, each GPIO pin is configured using 1 bit.
+
+Setting the IDR/ODR to high/low, or pull-up/pull-down?
 
 ## Lecture 1 Introduction
 
@@ -929,8 +1358,6 @@ For 32-bit processor like ARM, a **word** is 32 bit. (half-word, double-word)
 Von-Neumann architecture vs. Harvard architecture
 
 High-level language -> assembly language -> hardware representation
-
-
 
 On general computer: compiler -> assembler -> linker -> loader
 
