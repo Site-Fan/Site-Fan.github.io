@@ -1,4 +1,4 @@
-baseURL = 'https://site-fan.github.io/'
+baseURL = "{{ .Env.BASE_URL }}"
 copyright = "{year}" # To make 2007 - 2022. Just add before {year} example: 2007 - {year}
 languageCode = 'en-US'
 defaultContentLanguage = 'en'

@@ -715,7 +715,7 @@ Collective communication involves interactions among **multiple processes (≥ 3
     MPI_Bcast(&data, 1, MPI_INT, root, MPI_COMM_WORLD);
     ```
 
-- **Scatter (N-1)**:
+- **Scatter (1-N)**:
 
   - The root sends distinct pieces of data to all other processes.
 
@@ -794,12 +794,12 @@ Collective communication involves interactions among **multiple processes (≥ 3
 #### Remote Procedure Call (RPC) Principles:
 
 - **Serve Remotely**: Execute procedures on a remote server.
-- **Invoke Locally**: Calls are made as if they are local, abstracting remote interaction.
-- **Abstract Remote Interaction**: The complexity of remote procedure calls is hidden from the developer.
+- **Invoke as if Locally**: Calls are made as if they are local, abstracting remote interaction.
+- **Abstract Remote Interaction Details**: The complexity of remote procedure calls is hidden from the developer.
 
 #### Key Design Concerns in RPC:
 
-1. **Protocol**: Ensures proper communication between client and server (e.g., defining procedure names, parameters, and return types).
+1. **Protocol**: Ensures proper communication between client and server (e.g., defining procedure names, parameters, and return types in Interface Definition Language).
 2. **Communication**: Covers how requests and responses are transmitted, including serialization of data and selection of network protocols (e.g., TCP or HTTP).
 3. Proxy:
    - **Client Stub**: The client-side proxy to request remote procedures.
@@ -906,15 +906,6 @@ Collective communication involves interactions among **multiple processes (≥ 3
      - Simplicity of client init feature
      - Flexibility
    - Concern: visibility & security
-
-#### **REST vs. gRPC**
-
-- **REST** is best suited for stateless, resource-oriented interactions, where simplicity, standardization, and broad accessibility are critical. It leverages HTTP and supports flexible communication, including multiple formats like JSON and XML.
-- **gRPC** (Google Remote Procedure Call), on the other hand, is designed for high-performance communication, often using HTTP/2. It relies on **protocol buffers** for serialization, offering better efficiency and lower latency than REST, especially in internal systems or microservices where performance is a priority.
-- Comparison:
-  - **Protocol**: REST uses HTTP/1.1, whereas gRPC uses HTTP/2 for more efficient multiplexing and binary serialization.
-  - **Data Format**: REST typically uses JSON or XML, which are human-readable, whereas gRPC uses binary protocol buffers, making it faster but less human-readable.
-  - **Performance**: gRPC is more suited for high-performance internal communication, while REST is commonly used for public-facing APIs where readability and flexibility matter.
 
 #### **Benefits of RESTful API**
 
