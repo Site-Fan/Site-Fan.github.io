@@ -7,30 +7,29 @@ categories: Me
 [CV](./CV_Site_Fan.pdf) / [Email](mailto:fanst2021@mail.sustech.edu.cn) / [GitHub](https://github.com/GuTaoZi) / [LinkedIn](https://www.linkedin.com/in/site-fan-322802294/)
 
 {{< alert info "" >}}
-<strong>Looking for Ph.D. positions</strong><p>I am seeking Ph.D. positions for <strong>Fall 2025</strong> in <strong>computer systems</strong>, especially in distributed systems and operating systems.</p>
+<strong>Seeking Ph.D. positions</strong>
+<p>I am seeking Ph.D. positions beginning Fall 2026 in <strong>computer systems and high-performance computing</strong>, particularly in distributed and large-scale environments. My research interests center on designing scalable, reliable, and secure systems for compute- and data-intensive applications.</p>
 {{< /alert >}}
 
 ## Bio
 
-I am currently a Senior Undergraduate at the [Southern University of Science and Technology](sustech.edu.cn).
+I received my B.Eng. in Computer Science and Engineering from the [Southern University of Science and Technology](https://sustech.edu.cn/en/) in June 2025.
 
-Recently, I have been working on: 
-
-- Implementing subgraph matching algorithms for dynamic graphs on GPU at HPC Lab;
-- Refining the framework of LiteSys: achieving cost-effective service continuity for distributed datacenter software.
-
-For more information, please refer to my [CV](./CV_Site_Fan.pdf).
+My recent personal project focuses on designing high-performance algorithms for a Nurikabe solver, exploring optimization and search techniques for combinatorial problems. For more details about my projects and publications, please refer to my [CV](./CV_Site_Fan.pdf)
+.
 
 ## Research
 
-My primary research focus involves **building reliable and efficient systems**, ranging from distributed systems and operating systems, to systems for machine learning. I had the privilege of working as a research intern at [Order Lab](https://orderlab.io/) with [Prof. Ryan Huang (UMich)](https://web.eecs.umich.edu/~ryanph/) and [Yi Chen](https://chenyi.world/) on enhancing availability for datacenter software, with [Prof. Yinqian Zhang](https://yinqian.org/) on secure operating system kernel, and with [Prof. Ran Cheng](https://chengran.tech/) on evolutionary computation.
+My primary research interests lie in the design and implementation of scalable, high-performance, and reliable computing systems. I am especially interested in high-performance computing (HPC), distributed systems, as well as infrastructure and runtime systems that support machine learning workloads. My work emphasizes performance optimization, system design, and robustness under realistic failure scenarios.
 
-{{< alert info "" >}}
-<strong>GPU-based Parallel Subgraph Counting and Listing over Dynamic Graphs</strong><ul><li><b>Research Intern</b> at HPC Lab, SUSTech; Collaborating with Ant Group</li><li>Implemented subgraph counting and listing algorithms for dynamic graphs on GPU</li><li>Leveraging GPMA/LPMA as data structures for dynamic graph storage and updates.</li></ul>
+It has been a great honor to collaborate with faculty and researchers through research internships on topics including improving datacenter software availability ([Order Lab](https://orderlab.io/), with [Prof. Ryan Huang (University of Michigan)](https://web.eecs.umich.edu/~ryanph/) and [Yi Chen](https://chenyi.world/)), designing secure operating system kernels (with [Prof. Yinqian Zhang](https://yinqian.org/)), and advancing evolutionary computation techniques (with [Prof. Ran Cheng](https://chengran.tech/)). I am now seeking Ph.D. opportunities to continue pursuing research in high-performance, reliable, and scalable system design.
+
+{{< alert success "" >}}
+<strong>ParaCOSM: A Parallel Framework for Continuous Subgraph Matching</strong><ul><li><b>Research Intern</b> at HPC Lab, SUSTech; Collaborating with Ant Group</li><li>Developed ParaCOSM, an efficient parallel framework for continuous subgraph matching on CPU with two levels of parallelism.</li><li>Achieved 1.2× to 30.2× speedups across datasets and up to 71% higher success rates on large query graphs.</li><li>Accepted by <a href="https://icpp25.github.io/">ICPP '25</a> as co-author.</li></ul>
 {{< /alert >}}
 
 {{< alert success "" >}}
-<strong>LiteSys: Achieving Cost-Effective Service Continuity for Datacenter Software</strong><ul><li><b>Research Intern</b> at Order Lab, University of Michigan</li><li>Developed a cost-effective framework for datacenter software to preserve availability during incidents without the resource-intensive demands of full replication.</li><li>Under submission to <a href = "https://www.usenix.org/conference/osdi25">OSDI' 25 </a>as the second author.</li></ul>
+<strong>LiteLib: Containing Failure Impact for Stateful Applications with Compact Replicas</strong><ul><li><b>Research Intern</b> at Order Lab, University of Michigan</li><li>Developed LiteLib, a library that enables compact replicas for stateful applications to provide high service capacity during failures with low overhead.</li><li>LiteLib accelerates recovery by 50×, serves over 50% of requests during failures, and prevents cascading or metastable failures.</li><li>Under submission to <a href="https://www.usenix.org/conference/nsdi26">NSDI' 26</a> as the second author.</li></ul>
 {{< /alert >}}
 
 {{< alert success "" >}}
@@ -45,7 +44,7 @@ My primary research focus involves **building reliable and efficient systems**, 
 
 ### [Southern University of Science and Technology](https://sustech.edu.cn/en/) (SUSTech)
 
-- B.Eng. Candidate in Computer Science and Engineering, *2021.09 - Expected 2025.06*
+- B.Eng. in Computer Science and Engineering, *2021.09 - 2025.06*
 - GPA: 3.92/4.00, ranking top 1 with an honored degree from the 2021 Turing Class.
 - 2023 National Scholarship, 2022-2024 Outstanding Student Scholarships, 2023 Top 10 Outstanding Volunteers etc.
 
@@ -74,16 +73,5 @@ My primary research focus involves **building reliable and efficient systems**, 
 
  Please feel free to contact me via:
 
-- Email: [sitefan.official@gmail.com](mailto:sitefan.official@gmail.com)
+- Email: [fanst2021@mail.sustech.edu.cn](mailto:fanst2021@mail.sustech.edu.cn)
 - GitHub: https://github.com/GuTaoZi
-
-## Miscellaneous
-
-Besides Computer Science, I am also interested in Botany and Psychology. I enjoy the following activities that release certain hormones:
-
-- endorphins from hiking and Marathons
-- dopamine from anime and sandbox games
-- oxytocin from sharing great ideas through chatting, photographing, painting (though I'm not an expert). 
-
-{{< img src="AAFair.jpg" alt="20240525_145555.jpg" style="zoom: 7.5%;" caption="At 2024 Ann Arbor Art Fair, Michigan" caption-position="center">}}
-

@@ -38,7 +38,7 @@ A lot of my friends have been asking me to write about them.[^1] So, here is a p
 
 - [Xinyang Deng]()
 - [Linshu (Nicolas) Yang](https://profetia.github.io/)
-- [Jinda Dong](https://ethy9160.site/)
+- [Jinda Dong]()
 - [Haowen Zheng](https://ncc79601.github.io/)
 
 ### Friends@Internet
