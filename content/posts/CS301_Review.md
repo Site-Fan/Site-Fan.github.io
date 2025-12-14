@@ -50,15 +50,15 @@ RSB r5, r5, r5, LSL#5
 
 A cascaded connection of n full-adder blocks.
 
-{{<raw>}}<center><img src="https://i.ytimg.com/vi/b70ZQwci5sY/maxresdefault.jpg" style="zoom:30%;" />
+<center><img src="https://i.ytimg.com/vi/b70ZQwci5sY/maxresdefault.jpg" style="zoom:30%;" />
 
-</center>{{</raw>}}Problem: each cell causes a propagation delay, $n$ delays for $n$-bit addition
+</center>Problem: each cell causes a propagation delay, $n$ delays for $n$-bit addition
 
 #### Carry Lookahead Adder
 
-{{<raw>}}<center><img src="https://i.ytimg.com/vi/SQKdnxysXnw/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLBu9U5xkcvn_fCgPIr_XVSNaQ0yMA" style="zoom:60%;" />
+<center><img src="https://i.ytimg.com/vi/SQKdnxysXnw/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLBu9U5xkcvn_fCgPIr_XVSNaQ0yMA" style="zoom:60%;" />
 
-</center>{{</raw>}}
+</center>
 
 $G=A \text{ AND } B$
 
@@ -90,9 +90,9 @@ Carry-save adder: during addition, save the carry bits instead of propagating th
 
 Carry-save adders can be used on all addition but the final sum, which uses standard adder.
 
-{{<raw>}}<center><img src="https://media.cheggcdn.com/study/401/401c23ee-fa2c-4a07-8ba9-1fcfd2259a75/Screenshot2024-04-30at9.41.02PM.png" style="zoom:50%;" />
+<center><img src="https://media.cheggcdn.com/study/401/401c23ee-fa2c-4a07-8ba9-1fcfd2259a75/Screenshot2024-04-30at9.41.02PM.png" style="zoom:50%;" />
 
-</center>{{</raw>}}
+</center>
 
 #### Sequential Multiplier
 
@@ -253,7 +253,7 @@ $\text{Output} = \text{round}(2^N\times \frac{V_{input}}{V_{ref}})$.
 
 ### ADC Architectures
 
-{{<raw>}}<center><img src="https://media.springernature.com/full/springer-static/image/chp%3A10.1007%2F978-3-030-60910-8_3/MediaObjects/106758_4_En_3_Fig14_HTML.png?as=webp" style="zoom: 33%;" /></center>{{</raw>}}
+<center><img src="https://media.springernature.com/full/springer-static/image/chp%3A10.1007%2F978-3-030-60910-8_3/MediaObjects/106758_4_En_3_Fig14_HTML.png?as=webp" style="zoom: 33%;" /></center>
 
 **Successive-approximation (SAR)**
 
@@ -662,7 +662,7 @@ Characteristics
 
 ### Output Compare PWM
 
-{{<raw>}}<center><img src="https://s2.loli.net/2025/01/02/bFqdfHBoD7Mr32T.png" alt="image.png" style="zoom: 33%;" /></center>{{</raw>}}
+<center><img src="https://s2.loli.net/2025/01/02/bFqdfHBoD7Mr32T.png" alt="image.png" style="zoom: 33%;" /></center>
 
 | Output Compare Mode (OCnM) | Timer Output (OCREF) |
 | -------------------------- | -------------------- |
@@ -1268,7 +1268,7 @@ GPIOA_CRL	0x4001 0800
 
 **CRL and CRH**(configuration registers)
 
-{{<raw>}}<center><img src="https://s2.loli.net/2025/01/02/CURqFrZ2eyD7GIS.png" alt="image.png" style="zoom:50%;" /></center>{{</raw>}}
+<center><img src="https://s2.loli.net/2025/01/02/CURqFrZ2eyD7GIS.png" alt="image.png" style="zoom:50%;" /></center>
 
 Each GPIO pin is configured using 4 bits in CRL/CRH: `CNFx` an `MODEx`
 

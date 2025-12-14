@@ -281,7 +281,7 @@ Proof: $\sum\limits_i D^{\mathscr l_{\max}-\mathscr l_i}\le D ^{\mathscr l_\max}
 
 ### Chapter 5-2
 
-{{<raw>}}<center><img src="https://s2.loli.net/2023/01/01/8pS9IbAPfWXDOgt.png" style="zoom:25%;" /></center>{{</raw>}}
+<center><img src="https://s2.loli.net/2023/01/01/8pS9IbAPfWXDOgt.png" style="zoom:25%;" /></center>
 
 
 

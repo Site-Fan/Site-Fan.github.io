@@ -4,7 +4,7 @@ type: taxonomies
 layout: "home"
 ---
 
-<!-- Greetings to friend No.{{<raw>}} <span style="display:inline-block;"> <img border="0" src="http://cc.amazingcounters.com/counter.php?i=3303276&c=9910141" alt="AmazingCounters.com"> </span> {{</raw>}} who has visited this page! -->
+<!-- Greetings to friend No. <span style="display:inline-block;"> <img border="0" src="http://cc.amazingcounters.com/counter.php?i=3303276&c=9910141" alt="AmazingCounters.com"> </span>  who has visited this page! -->
 
 A lot of my friends have been asking me to write about them.[^1] So, here is a page dedicated to my friends, listed in an order mixing randomness and anti-chonology.
 

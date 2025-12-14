@@ -199,21 +199,21 @@ where $\|{\bf w}\|={\bf w}^T{\bf w}=w_0^2+w_1^2+\cdots+w_M^2$.
 
 - The Gaussian Distribution
   $$
-  \mathcal N(x|\mu,\sigma^2)=\frac 1 {(2\pi\sigma^2)^{1/2}}\exp\left\{-\frac 1 {2\sigma^2}(x-\mu)^2\right\}
+  \mathcal N(x|\mu,\sigma^2)=\frac 1 {(2\pi\sigma^2)^{1/2}}\exp\left\\{-\frac 1 {2\sigma^2}(x-\mu)^2\right\\}
   $$
 
 - Gaussian Mean and Variance
   $$
   \begin{align*}
-  \mathbb E[x]&=\int_{-\infty}^\infty \mathcal N(x\vert \mu,\sigma^2)x dx = \mu\\
+  \mathbb E[ x ]&=\int_{-\infty}^\infty \mathcal N(x\vert \mu,\sigma^2)x dx = \mu\\
   \mathbb E[x^2]&=\int_{-\infty}^\infty \mathcal N(x\vert \mu,\sigma^2)x^2 dx = \mu^2 + \sigma^2\\
-  \text{var}[x]&=\mathbb E[x^2]-\mathbb E[x]^2 = \sigma^2
+  \text{var}[ x ]&=\mathbb E[x^2]-\mathbb E[ x ]^2 = \sigma^2
   \end{align*}
   $$
 
 - <a name="multigaussian">The Multivariate Gaussian</a>
   $$
-  \mathcal N(\mathbf x|\mathbf\mu,\mathbf\Sigma)=\frac 1 {(2\pi)^{D/2}}\frac 1 {|\mathbf\Sigma|^{1/2}}\exp\left\{-\frac 1 2(\mathbf x-\mathbf\mu)^\text T\mathbf\Sigma^{-1}(\mathbf x - \mathbf \mu)\right\}
+  \mathcal N(\mathbf x|\mathbf\mu,\mathbf\Sigma)=\frac 1 {(2\pi)^{D/2}}\frac 1 {|\mathbf\Sigma|^{1/2}}\exp\left\lbrace-\frac 1 2(\mathbf x-\mathbf\mu)^\text T\mathbf\Sigma^{-1}(\mathbf x - \mathbf \mu)\right\rbrace
   $$
 
 
@@ -433,7 +433,7 @@ Introducing a threshold $\theta$ and rejecting those inputs $x$ for which the la
 - (b)	By inference, determine the posterior class probabilities $p(\mathcal C_k\vert\mathbf x)$ directly. (discriminative model)
 - (c)	Find a function $f(x)$, called a **discriminant function**, which maps each input $\mathbf x$ directly onto a class label. *Probabilities play no role.*
 
-{{<raw>}}
+
 <details>
     <summary><b>Pros/Cons of the three approaches(extract from PRML)</b></summary>
     <p>Let us consider the relative merits of these three alternatives. Approach (a) is the most demanding because it involves finding the joint distribution over both <mjx-container class="MathJax CtxtMenu_Attached_0" jax="CHTML" tabindex="0" ctxtmenu_counter="79" style="font-size: 122.1%; position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-texatom texclass="ORD"><mjx-mi class="mjx-b"><mjx-c class="mjx-c1D431 TEX-B"></mjx-c></mjx-mi></mjx-texatom></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow data-mjx-texclass="ORD"><mi mathvariant="bold">x</mi></mrow></math></mjx-assistive-mml></mjx-container> and <mjx-container class="MathJax CtxtMenu_Attached_0" jax="CHTML" tabindex="0" ctxtmenu_counter="80" style="font-size: 122.1%; position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-msub><mjx-texatom texclass="ORD"><mjx-mi class="mjx-cal mjx-i"><mjx-c class="mjx-c43 TEX-C"></mjx-c></mjx-mi></mjx-texatom><mjx-script style="vertical-align: -0.15em;"><mjx-mi class="mjx-i" size="s"><mjx-c class="mjx-c1D458 TEX-I"></mjx-c></mjx-mi></mjx-script></mjx-msub></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mrow data-mjx-texclass="ORD"><mi data-mjx-variant="-tex-calligraphic" mathvariant="script">C</mi></mrow><mi>k</mi></msub></math></mjx-assistive-mml></mjx-container>. For many applications, <mjx-container class="MathJax CtxtMenu_Attached_0" jax="CHTML" tabindex="0" ctxtmenu_counter="81" style="font-size: 122.1%; position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-texatom texclass="ORD"><mjx-mi class="mjx-b"><mjx-c class="mjx-c1D431 TEX-B"></mjx-c></mjx-mi></mjx-texatom></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow data-mjx-texclass="ORD"><mi mathvariant="bold">x</mi></mrow></math></mjx-assistive-mml></mjx-container> will have high dimensionality, and consequently we may need a large training set in order to be able to determine the class-conditional densities to reasonable accuracy. Note that the class priors <mjx-container class="MathJax CtxtMenu_Attached_0" jax="CHTML" tabindex="0" ctxtmenu_counter="82" style="font-size: 122.1%; position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45D TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-msub><mjx-texatom texclass="ORD"><mjx-mi class="mjx-cal mjx-i"><mjx-c class="mjx-c43 TEX-C"></mjx-c></mjx-mi></mjx-texatom><mjx-script style="vertical-align: -0.15em;"><mjx-mi class="mjx-i" size="s"><mjx-c class="mjx-c1D458 TEX-I"></mjx-c></mjx-mi></mjx-script></mjx-msub><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>p</mi><mo stretchy="false">(</mo><msub><mrow data-mjx-texclass="ORD"><mi data-mjx-variant="-tex-calligraphic" mathvariant="script">C</mi></mrow><mi>k</mi></msub><mo stretchy="false">)</mo></math></mjx-assistive-mml></mjx-container> can often be estimated simply from the fractions of the training set data points in each of the classes. One advantage of approach (a), however, is that it also allows the marginal density of data <mjx-container class="MathJax CtxtMenu_Attached_0" jax="CHTML" tabindex="0" ctxtmenu_counter="83" style="font-size: 122.1%; position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45D TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-texatom texclass="ORD"><mjx-mi class="mjx-b"><mjx-c class="mjx-c1D431 TEX-B"></mjx-c></mjx-mi></mjx-texatom><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>p</mi><mo stretchy="false">(</mo><mrow data-mjx-texclass="ORD"><mi mathvariant="bold">x</mi></mrow><mo stretchy="false">)</mo></math></mjx-assistive-mml></mjx-container> to be determined from <mjx-container class="MathJax CtxtMenu_Attached_0" jax="CHTML" tabindex="0" ctxtmenu_counter="84" style="font-size: 122.1%; position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45D TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-texatom texclass="ORD"><mjx-mi class="mjx-b"><mjx-c class="mjx-c1D431 TEX-B"></mjx-c></mjx-mi></mjx-texatom><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c3D"></mjx-c></mjx-mo><mjx-munder space="4"><mjx-row><mjx-base><mjx-mo class="mjx-sop"><mjx-c class="mjx-c2211 TEX-S1"></mjx-c></mjx-mo></mjx-base></mjx-row><mjx-row><mjx-under style="padding-top: 0.167em; padding-left: 0.344em;"><mjx-texatom size="s" texclass="ORD"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D458 TEX-I"></mjx-c></mjx-mi></mjx-texatom></mjx-under></mjx-row></mjx-munder><mjx-mi class="mjx-i" space="2"><mjx-c class="mjx-c1D45D TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-texatom texclass="ORD"><mjx-mi class="mjx-b"><mjx-c class="mjx-c1D431 TEX-B"></mjx-c></mjx-mi></mjx-texatom><mjx-mo class="mjx-n"><mjx-c class="mjx-c7C"></mjx-c></mjx-mo><mjx-msub><mjx-texatom texclass="ORD"><mjx-mi class="mjx-cal mjx-i"><mjx-c class="mjx-c43 TEX-C"></mjx-c></mjx-mi></mjx-texatom><mjx-script style="vertical-align: -0.15em;"><mjx-mi class="mjx-i" size="s"><mjx-c class="mjx-c1D458 TEX-I"></mjx-c></mjx-mi></mjx-script></mjx-msub><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45D TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-msub><mjx-texatom texclass="ORD"><mjx-mi class="mjx-cal mjx-i"><mjx-c class="mjx-c43 TEX-C"></mjx-c></mjx-mi></mjx-texatom><mjx-script style="vertical-align: -0.15em;"><mjx-mi class="mjx-i" size="s"><mjx-c class="mjx-c1D458 TEX-I"></mjx-c></mjx-mi></mjx-script></mjx-msub><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>p</mi><mo stretchy="false">(</mo><mrow data-mjx-texclass="ORD"><mi mathvariant="bold">x</mi></mrow><mo stretchy="false">)</mo><mo>=</mo><munder><mo data-mjx-texclass="OP" movablelimits="false">∑</mo><mrow data-mjx-texclass="ORD"><mi>k</mi></mrow></munder><mi>p</mi><mo stretchy="false">(</mo><mrow data-mjx-texclass="ORD"><mi mathvariant="bold">x</mi></mrow><mo data-mjx-texclass="ORD" fence="false" stretchy="false">|</mo><msub><mrow data-mjx-texclass="ORD"><mi data-mjx-variant="-tex-calligraphic" mathvariant="script">C</mi></mrow><mi>k</mi></msub><mo stretchy="false">)</mo><mi>p</mi><mo stretchy="false">(</mo><msub><mrow data-mjx-texclass="ORD"><mi data-mjx-variant="-tex-calligraphic" mathvariant="script">C</mi></mrow><mi>k</mi></msub><mo stretchy="false">)</mo></math></mjx-assistive-mml></mjx-container>. This can be useful for detecting new data points that have low probability under the model and for which the predictions maybe of low accuracy, which is known as <em>outlier detection</em> or <em>novelty detection</em>.</p>
@@ -448,7 +448,7 @@ Introducing a threshold $\theta$ and rejecting those inputs $x$ for which the la
 <li>Combining models. </li>
 </ul>
 </details>
-{{</raw>}}
+
 
 #### Loss functions for regression
 
@@ -531,19 +531,19 @@ Entropy maximized when $\forall i,\ p_i=\frac 1 M$.
 
 Put bins of width $\Delta$ along the real line.
 $$
-\lim\limits_{\Delta\rightarrow0}\left\{-\sum\limits_{i}p(x_i)\Delta\ln p(x_i)\right\}=-\int p(x)\ln p(x)\text d x
+\lim\limits_{\Delta\rightarrow0}\left\lbrace-\sum\limits_{i}p(x_i)\Delta\ln p(x_i)\right\rbrace=-\int p(x)\ln p(x)\text d x
 $$
 For fixed $\sigma^2$, when $p(x)=\mathcal N(x\vert\mu,\sigma^2)$, differential entropy is maximized
 $$
-\text H[x]=\frac 1 2\{1+\ln(2\pi\sigma^2)\}
+\text H[ x ]=\frac 1 2\{1+\ln(2\pi\sigma^2)\}
 $$
 
 #### Entropy
 
 $$
 \begin{align*}
-\text H[x]&=-\sum\limits_x p(x)\ln p(x)\\
-\text H[x]&=-\int p(x)\ln p(x)\text d x
+\text H[ x ]&=-\sum\limits_x p(x)\ln p(x)\\
+\text H[ x ]&=-\int p(x)\ln p(x)\text d x
 \end{align*}
 $$
 
@@ -564,7 +564,7 @@ $$
 \begin{align*}
 \text{KL}(p\|q)&=\text{Cross Entropy C}(p\|q)-\text {Entropy H}(p)\\
 &=-\int p(\mathbf x)\ln q(\mathbf x)\text d\mathbf x-\left(-\int p(\mathbf x)\ln p(\mathbf x)\text d\mathbf x\right)\\
-&=-\int p(\mathbf x)\ln \left\{\frac{q(\mathbf x)}{p(\mathbf x)}\right\}\text d\mathbf x
+&=-\int p(\mathbf x)\ln \left\lbrace\frac{q(\mathbf x)}{p(\mathbf x)}\right\rbrace\text d\mathbf x
 \end{align*}
 $$
 
@@ -629,7 +629,7 @@ $x$: one ball is lighter
 
 $y$: weighing once
 
-$\text H[x]$: uncertain of balls
+$\text H[ x ]$: uncertain of balls
 
 $\text H[x\vert y]$: uncertain of balls after weighing once
 $$
@@ -642,7 +642,7 @@ $$
 Sum the equation above with $t=0,1,\cdots,T$, 
 $$
 \begin{matrix}
-\log_2N = \text H[x]-\text H[x\vert y_1,\cdots,y_T]\le T\log_23\\
+\log_2N = \text H[ x ]-\text H[x\vert y_1,\cdots,y_T]\le T\log_23\\
 T\ge \log_3N
 \end{matrix}
 $$
@@ -656,8 +656,8 @@ $$
 $$
 \begin{align*}
 \text{Bern}(x\vert \mu)&=\mu^x(1-\mu)^{1-x}\\
-\mathbb E[x]&=\mu\\
-\text{var}[x]&=\mu(1-\mu)
+\mathbb E[ x ]&=\mu\\
+\text{var}[ x ]&=\mu(1-\mu)
 \end{align*}
 $$
 
@@ -769,12 +769,12 @@ We can interpret the parameters $\alpha_k$ of the Dirichlet prior as an effectiv
 
 - The Gaussian Distribution
   $$
-  \mathcal N(x|\mu,\sigma^2)=\frac 1 {(2\pi\sigma^2)^{1/2}}\exp\left\{-\frac 1 {2\sigma^2}(x-\mu)^2\right\}
+  \mathcal N(x|\mu,\sigma^2)=\frac 1 {(2\pi\sigma^2)^{1/2}}\exp\left\lbrace-\frac 1 {2\sigma^2}(x-\mu)^2\right\rbrace
   $$
 
 - The Multivariate Gaussian
   $$
-  \mathcal N(\mathbf x|\mathbf\mu,\mathbf\Sigma)=\frac 1 {(2\pi)^{D/2}}\frac 1 {|\mathbf\Sigma|^{1/2}}\exp\left\{-\frac 1 2(\mathbf x-\mathbf\mu)^\text T\mathbf\Sigma^{-1}(\mathbf x - \mathbf \mu)\right\}
+  \mathcal N(\mathbf x|\mathbf\mu,\mathbf\Sigma)=\frac 1 {(2\pi)^{D/2}}\frac 1 {|\mathbf\Sigma|^{1/2}}\exp\left\lbrace-\frac 1 2(\mathbf x-\mathbf\mu)^\text T\mathbf\Sigma^{-1}(\mathbf x - \mathbf \mu)\right\rbrace
   $$
 
 
@@ -814,7 +814,7 @@ $$
    $$
 
    $$
-   \left\{\begin{align*}\sigma^{-2}&=\sigma_1^{-2}+\sigma_2^{-2}\\\sigma^{-2}\mu&=\sigma_1^{-2}\mu_1+\sigma_2^{-2}\mu_2\end{align*}\right .
+   \left\lbrace\begin{align*}\sigma^{-2}&=\sigma_1^{-2}+\sigma_2^{-2}\\\sigma^{-2}\mu&=\sigma_1^{-2}\mu_1+\sigma_2^{-2}\mu_2\end{align*}\right .
    $$
    
    For multivariate Gaussians, use $\Sigma$ to replace $\sigma^2$.
@@ -839,7 +839,7 @@ p(x\vert y) &= \mathcal N(x\vert Hy,L)\\
 $$
 where
 $$
-\left\{ \begin{align*}
+\left\lbrace \begin{align*}
 L^{-1}&=A^TQ^{-1}A + \Sigma^{-1}\\
 Hy &= L\{A^TQ^{-1}y+\Sigma^{-1}\mu\}
 \end{align*}\right.
@@ -925,7 +925,7 @@ $$
 
 Log likelihood of mixtures
 $$
-\ln p(\mathbf X\vert\boldsymbol \pi,\boldsymbol\mu,\boldsymbol\Sigma)=\sum\limits_{n=1}^N\ln\left\{\sum\limits_{k=1}^K\pi_k\mathcal N(\mathbf x\vert\boldsymbol\mu_k,\boldsymbol\Sigma_k)\right\}
+\ln p(\mathbf X\vert\boldsymbol \pi,\boldsymbol\mu,\boldsymbol\Sigma)=\sum\limits_{n=1}^N\ln\left\lbrace\sum\limits_{k=1}^K\pi_k\mathcal N(\mathbf x\vert\boldsymbol\mu_k,\boldsymbol\Sigma_k)\right\rbrace
 $$
 The maximum likelihood solution for the parameters no longer has a closed-form analytical solution.
 
@@ -943,12 +943,12 @@ $$
 - $g(\boldsymbol\eta)$: normalization coefficient satisfying ↓
 
 $$
-g(\boldsymbol\eta)\int h(\mathbf x)\exp\left\{\boldsymbol\eta^\text T \mathbf u(\mathbf x)\right\}\text d\mathbf x=1
+g(\boldsymbol\eta)\int h(\mathbf x)\exp\left\lbrace\boldsymbol\eta^\text T \mathbf u(\mathbf x)\right\rbrace\text d\mathbf x=1
 $$
 
 **The Bernoulli Distribution**: 
 $$
-p(x\vert \mu)=(1-\mu)\exp\left\{\ln(\frac{\mu}{1-\mu})x\right\}
+p(x\vert \mu)=(1-\mu)\exp\left\lbrace\ln(\frac{\mu}{1-\mu})x\right\rbrace
 $$
 So
 $$
@@ -959,7 +959,7 @@ $$
 $$
 **The Multinomial Distribution:**
 $$
-p(\mathbf x\vert\boldsymbol \mu)=\exp\left\{\sum\limits_{k=1}^Mx_k\ln\mu_k\right\}
+p(\mathbf x\vert\boldsymbol \mu)=\exp\left\lbrace\sum\limits_{k=1}^Mx_k\ln\mu_k\right\rbrace
 $$
 Let $\mu_M=1-\sum\limits_{k=1}^{M-1}\mu_k$,
 $$
@@ -971,7 +971,7 @@ $$
 
 **The Gaussian Distribution:**
 $$
-p(x\vert\mu,\sigma^2)=\frac 1 {\sqrt{2\pi\sigma^2}}\exp\left\{-\frac 1 {2\sigma^2}(x-\mu)^2\right\}=h(x)g(\boldsymbol\eta)\exp\left\{\boldsymbol\eta^\text T\mathbf u(x)\right\}
+p(x\vert\mu,\sigma^2)=\frac 1 {\sqrt{2\pi\sigma^2}}\exp\left\lbrace-\frac 1 {2\sigma^2}(x-\mu)^2\right\rbrace=h(x)g(\boldsymbol\eta)\exp\left\lbrace\boldsymbol\eta^\text T\mathbf u(x)\right\rbrace
 $$
 where
 $$
@@ -985,7 +985,7 @@ $$
 
 Likelihood function
 $$
-p(\mathbf{X} \vert \boldsymbol{\eta})=\left(\prod_{n=1}^{N} h\left(\mathbf{x}_{n}\right)\right) g(\boldsymbol{\eta})^{N} \exp \left\{\boldsymbol{\eta}^{T} \sum_{n=1}^{N} \mathbf{u}\left(\mathbf{x}_{n}\right)\right\}
+p(\mathbf{X} \vert \boldsymbol{\eta})=\left(\prod_{n=1}^{N} h\left(\mathbf{x}_{n}\right)\right) g(\boldsymbol{\eta})^{N} \exp \left\lbrace\boldsymbol{\eta}^{T} \sum_{n=1}^{N} \mathbf{u}\left(\mathbf{x}_{n}\right)\right\rbrace
 $$
 Condition of maximum likelihood estimator $\boldsymbol\eta_\text{ML}$
 $$
@@ -1007,7 +1007,7 @@ Seek a prior that is **conjugate** to the likelihood function: the posterior dis
 
 For any member of the exponential family, there exists a conjugate prior
 $$
-\text{prior} = p(\boldsymbol\eta\vert\chi,\nu) = f(\chi,\nu)g(\boldsymbol\eta)^\nu\exp\left\{\nu\boldsymbol\eta^\text T\chi\right\}
+\text{prior} = p(\boldsymbol\eta\vert\chi,\nu) = f(\chi,\nu)g(\boldsymbol\eta)^\nu\exp\left\lbrace\nu\boldsymbol\eta^\text T\chi\right\rbrace
 $$
 where
 
@@ -1016,11 +1016,11 @@ where
 
 Recall that
 $$
-\text{Likelihood} =p(\mathbf{X} \vert \boldsymbol{\eta})=\left(\prod_{n=1}^{N} h\left(\mathbf{x}_{n}\right)\right) g(\boldsymbol{\eta})^{N} \exp \left\{\boldsymbol{\eta}^{T} \sum_{n=1}^{N} \mathbf{u}\left(\mathbf{x}_{n}\right)\right\}
+\text{Likelihood} =p(\mathbf{X} \vert \boldsymbol{\eta})=\left(\prod_{n=1}^{N} h\left(\mathbf{x}_{n}\right)\right) g(\boldsymbol{\eta})^{N} \exp \left\lbrace\boldsymbol{\eta}^{T} \sum_{n=1}^{N} \mathbf{u}\left(\mathbf{x}_{n}\right)\right\rbrace
 $$
 Multiply the prior and the likelihood, the posterior is
 $$
-\text{Posterior} \propto g(\boldsymbol\eta)^{\nu+N}\exp\left\{\boldsymbol\eta^\text T \left(\sum\limits_{n=1}^N\mathbf u(\mathbf x_n)+\nu\chi\right)\right\}
+\text{Posterior} \propto g(\boldsymbol\eta)^{\nu+N}\exp\left\lbrace\boldsymbol\eta^\text T \left(\sum\limits_{n=1}^N\mathbf u(\mathbf x_n)+\nu\chi\right)\right\rbrace
 $$
 which is in the same functional form as the prior.
 
@@ -1095,7 +1095,7 @@ See the [course material for Lab06: LDA](https://github.com/GuTaoZi/CS329_Machin
 ### Perceptron
 
 $$
-y(\mathbf x)=f(\mathbf w^\text T\phi(\mathbf x))\quad f(a) = \left\{\begin{matrix}+1,a\ge0 \\ -1, a<0\end{matrix}\right.
+y(\mathbf x)=f(\mathbf w^\text T\phi(\mathbf x))\quad f(a) = \left\lbrace\begin{matrix}+1,a\ge0 \\ -1, a<0\end{matrix}\right.
 $$
 
 #### Training
@@ -1169,7 +1169,7 @@ $$
 $$
 
 $$
-\left\{\begin{align*}\Sigma_{i\text{MAP}}^{-1}&=\Sigma_{i\text{ML}}^{-1}+\Sigma_{i0}^{-1}\\\Sigma_{i\text{MAP}}^{-1}\mu_{i\text{MAP}}&=\Sigma_{i\text{ML}}^{-1}\mu_{i\text{ML}}+\Sigma_{i0}^{-1}\mu_{i0}\end{align*}\right.
+\left\lbrace\begin{align*}\Sigma_{i\text{MAP}}^{-1}&=\Sigma_{i\text{ML}}^{-1}+\Sigma_{i0}^{-1}\\\Sigma_{i\text{MAP}}^{-1}\mu_{i\text{MAP}}&=\Sigma_{i\text{ML}}^{-1}\mu_{i\text{ML}}+\Sigma_{i0}^{-1}\mu_{i0}\end{align*}\right.
 $$
 
 ### Probabilistic Discriminative Models
@@ -1207,7 +1207,7 @@ $$
 $$
 where
 $$
-E_\infty(z) = \left\{\begin{matrix}0, &z\ge 0 \\ \infty, &z<0\end{matrix}\right.
+E_\infty(z) = \left\lbrace\begin{matrix}0, &z\ge 0 \\ \infty, &z<0\end{matrix}\right.
 $$
 
 #### Soft Margin Classifier

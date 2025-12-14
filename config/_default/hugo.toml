@@ -35,6 +35,8 @@ paginate = 15
         [markup.goldmark.extensions.passthrough.delimiters]
           block = [['\[', '\]'], ['$$', '$$']]
           inline = [['\(', '\)'], ['$', '$']]
+      [markup.goldmark.renderer]
+        unsafe = true
 
 [params]
   math = true

@@ -222,15 +222,15 @@ Interrupts are managed by Nested Vectored Interrupt Controller (`NVIC`)
 
 ## Lecture 6: UART
 
-{{<raw>}}<center><img src="http://localhost:1313/img/cont.png" style="zoom: 25%;" /></center>{{</raw>}}
+<center><img src="http://localhost:1313/img/cont.png" style="zoom: 25%;" /></center>
 
 ## Lecture 7: Timer Intro
 
-{{<raw>}}<center><img src="http://localhost:1313/img/cont.png" style="zoom: 25%;" /></center>{{</raw>}}
+<center><img src="http://localhost:1313/img/cont.png" style="zoom: 25%;" /></center>
 
 ## Lecture 8: Timer Advanced
 
-{{<raw>}}<center><img src="http://localhost:1313/img/cont.png" style="zoom: 25%;" /></center>{{</raw>}}
+<center><img src="http://localhost:1313/img/cont.png" style="zoom: 25%;" /></center>
 
 ## Lecture 9: I²C and SPI
 

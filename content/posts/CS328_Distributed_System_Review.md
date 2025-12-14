@@ -245,7 +245,7 @@ An operation that sends a single message from one process to each of the members
 
 **Remote Method Invocation(RMI)**
 
-{{<raw>}}<center><img src="https://s2.loli.net/2025/01/03/hjQZc48FbBKmfeU.png" alt="Picture2.png" style="zoom: 50%;" /></center>{{</raw>}}
+<center><img src="https://s2.loli.net/2025/01/03/hjQZc48FbBKmfeU.png" alt="Picture2.png" style="zoom: 50%;" /></center>
 
 - **Communication Module**
   - Implements the request-reply protocol
@@ -1101,7 +1101,7 @@ Spark does not have a built-in file system. Data can be accessed from a variety 
 
 **Container**: image instance `run`
 
-{{<raw>}}<center><img src="https://learn.microsoft.com/en-us/dotnet/architecture/microservices/container-docker-introduction/media/docker-containers-images-registries/taxonomy-of-docker-terms-and-concepts.png" style="zoom: 33%;" /></center>{{</raw>}}
+<center><img src="https://learn.microsoft.com/en-us/dotnet/architecture/microservices/container-docker-introduction/media/docker-containers-images-registries/taxonomy-of-docker-terms-and-concepts.png" style="zoom: 33%;" /></center>
 
 Docker CLI, Docker Daemon, Docker Desktop
 
@@ -1138,7 +1138,7 @@ Currently the most popular software deployment solution for containerized applic
   - kube-proxy: Manages network traffic between services in the cluster.
   - Container Runtime: Software that runs containers (e.g., Docker, containerd).
 
-{{<raw>}}<center><img src="https://kubernetes.io/images/docs/components-of-kubernetes.svg" style="zoom: 50%;" /></center>{{</raw>}}
+<center><img src="https://kubernetes.io/images/docs/components-of-kubernetes.svg" style="zoom: 50%;" /></center>
 
 **Kubernetes Resources/Objects**
 
@@ -1213,7 +1213,7 @@ A paradigm for enabling network access to a scalable and elastic pool of shareab
 - Software as a Service (SaaS)
   - On-demand access to ready-to-use, cloud-hosted application software
 
-{{<raw>}}<center><img src="https://media7o.sedmiodjel.com/blog/pros-and-cons-of-different-cloud-computing-models/cloud-computing-models-comparison.png" style="zoom: 33%;" /></center>{{</raw>}}
+<center><img src="https://media7o.sedmiodjel.com/blog/pros-and-cons-of-different-cloud-computing-models/cloud-computing-models-comparison.png" style="zoom: 33%;" /></center>
 
 FaaS, CaaS, KaaS etc.
 
