@@ -30,7 +30,7 @@ It has been a great honor to collaborate with faculty and researchers through re
 	<li><b>Research Intern</b> at HPC Lab, SUSTech</li>
 	<li>Developed ParaCOSM, an efficient parallel framework for continuous subgraph matching on CPU with two levels of parallelism.</li>
 	<li>Achieved 1.2× to 30.2× speedups across datasets and up to 71% higher success rates on large query graphs.</li>
-	<li>Accepted by <a href="https://icpp25.github.io/">ICPP '25</a> as co-author. <a href="/ParaCOSM.pdf">[Paper]</a> <a href="/ParaCOSM_presentation.pdf">[Presentation]</a> <a href="https://github.com/SUSTech-HPCLab/ParaCOSM">[GitHub]</a></li>
+	<li>Accepted by <a href="https://icpp25.github.io/">ICPP '25</a> as co-author. <a href="https://doi.org/10.1145/3754598.3754603">[Paper]</a> <a href="/ParaCOSM_presentation.pdf">[Slides]</a> <a href="https://github.com/SUSTech-HPCLab/ParaCOSM">[Code]</a></li>
 </ul>
 {{< /alert >}}
 
@@ -51,7 +51,7 @@ It has been a great honor to collaborate with faculty and researchers through re
 ### [Southern University of Science and Technology](https://sustech.edu.cn/en/) (SUSTech)
 
 - B.Eng. in Computer Science and Engineering, *2021.09 - 2025.06*
-- GPA: 3.92/4.00, ranking top 1 with an honored degree from the 2021 Turing Class.
+- GPA: 3.90/4.00, ranking top 1 with an honored degree from the 2021 Turing Class.
 	- 2023 National Scholarship
 	- 2022-2024 Outstanding Student Scholarships
 	- 2023 Top 10 Outstanding Volunteers etc.

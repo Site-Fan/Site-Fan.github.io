@@ -2,8 +2,8 @@
 set -euo pipefail
 
 # Deploy script: pulls from origin/main, builds Hugo site, and syncs to public dir
-REPO_DIR="/home/gutao/blog"
-PUBLIC_DIR="/home/gutao/blog/public"
+REPO_DIR="/home/sitefan/blog"
+PUBLIC_DIR="/home/sitefan/blog/public"
 BRANCH="main"
 BASEURL="https://fanst.cc/"
 
@@ -41,6 +41,6 @@ fi
 rsync -av --delete public/ "$PUBLIC_DIR/"
 
 # Ensure correct ownership
-chown -R gutao:gutao "$PUBLIC_DIR"
+chown -R sitefan:sitefan "$PUBLIC_DIR"
 
 echo "Deploy finished at $(date)"

@@ -1,0 +1,38 @@
+{{ define "main" }} 
+
+<div class="flex flex-col gap-1">
+  <h1 class="title-large">
+    {{ if .Params.header }}
+      {{ .Params.header }}
+    {{ else }}
+      {{ .Title }}
+    {{ end }}
+  </h1>
+
+  {{ with .Content }}
+    {{ . }}
+  {{ end }}
+</div>
+
+<section class="py-10 flex flex-col gap-10">
+  <ul class="taxonomy-list">
+    {{ range $index, $pages := .Pages }} 
+      <li>
+        <a href=" {{ .Permalink }} ">
+          {{ .Title }} ({{ len .Pages }})
+        </a>
+      </li>
+    {{ end }}
+  </ul>
+</section>
+
+<!-- Small MapMyVisitors Widget — only on friends section -->
+{{ if eq .Section "friends" }}
+  <div class="mt-8 flex justify-center">
+    <div style="max-width: 360px; width: 100%;">
+      <script type="text/javascript" id="mapmyvisitors" src="//mapmyvisitors.com/map.js?d=BXp3e5DHvqoAts4RQlNk-jKVKM7zIz2L2k6J_2CuWUE&cl=ffffff&w=a"></script>
+    </div>
+  </div>
+{{ end }}
+
+{{ end }}

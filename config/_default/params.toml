@@ -10,6 +10,11 @@ avatar = "https://fanst.cc/images/avatar.jpg"
 #favicon
 favicon = "icons/favicon-32x32.png"
 
+# ICP record configuration
+[icp]
+number = "蜀ICP备2026000829号"
+url = "https://beian.miit.gov.cn"
+
 # disqus is a comment system. see https://disqus.com
 disqusShortname = ""
 
