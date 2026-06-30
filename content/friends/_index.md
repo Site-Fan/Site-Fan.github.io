@@ -6,7 +6,7 @@ layout: "home"
 
 <!-- Greetings to friend No. <span style="display:inline-block;"> <img border="0" src="http://cc.amazingcounters.com/counter.php?i=3303276&c=9910141" alt="AmazingCounters.com"> </span>  who has visited this page! -->
 
-A lot of my friends have been asking me to write about them.[^1] So, here is a page dedicated to my friends, listed in an order mixing randomness and anti-chonology.
+A lot of my friends have been asking me to write about them.[^1] So, here is a page dedicated to my friends, listed in an order mixing randomness and anti-chronology.
 
 ### Friends@Undergraduate
 
@@ -14,7 +14,7 @@ A lot of my friends have been asking me to write about them.[^1] So, here is a p
   - [Jayfeather233](https://github.com/Jayfeather233)
   - [Shengding Liu](https://sendinga.github.io/)
   - [Kangrui (Harry) Chen](https://artanisax.github.io/)
-  - [Jiawei Fang](https://iskxcr.github.io/)
+  - [Jiawei Fang]()
   - [Linghu Gong](https://blog.icel.site/)
   - [Zhanwei Zhang](https://it-bill.github.io/)
   - [Jianhui (Yuan) Xu](https://neumoneumo.github.io/blog/)

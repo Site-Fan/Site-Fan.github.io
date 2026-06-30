@@ -5,7 +5,6 @@
 
 {{ if not $isRemote }}
   {{ $avatar = resources.GetMatch $avatarURL }}
-  {{ $tiny = ($avatar.Fill "80x80 q90") }} <!-- Assign to $tiny -->
 {{ end }}
 
 <div class="flex-none w-20 h-20 rounded-full overflow-hidden">
@@ -15,10 +14,10 @@
         src="{{ $avatarURL }}"
         alt="{{ .Site.Title }}"
       {{ else }}
-        srcset="{{- with $tiny.RelPermalink -}}{{.}} 80w{{- end -}}"
-        src="{{ $avatar.RelPermalink }}"
-        width="{{ $avatar.Width }}"
-        height="{{ $avatar.Height }}"
+          src="{{ $avatar.RelPermalink }}"
+          width="{{ $avatar.Width }}"
+          height="{{ $avatar.Height }}"
+          class="w-full h-full object-cover object-center"
         alt="{{ .Site.Title }}"
       {{ end }}
     />

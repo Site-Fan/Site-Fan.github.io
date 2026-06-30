@@ -5,7 +5,7 @@ isSinglePage = true
 description = "Hello"
 
 # Header Configuration
-avatar = "https://fanst.cc/images/avatar.jpg"
+avatar = "images/avatar.jpg"
 
 #favicon
 favicon = "icons/favicon-32x32.png"
@@ -14,6 +14,11 @@ favicon = "icons/favicon-32x32.png"
 [icp]
 number = "蜀ICP备2026000829号"
 url = "https://beian.miit.gov.cn"
+
+# Moe ICP record configuration
+[moe_icp]
+number = "萌ICP备20269202号"
+url = "https://icp.gov.moe/?keyword=20269202"
 
 # disqus is a comment system. see https://disqus.com
 disqusShortname = ""

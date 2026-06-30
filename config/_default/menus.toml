@@ -5,12 +5,6 @@
     weight = 1
 
 [[main]]
-    identifier = "project"
-    name = "Projects"
-    url = "/project"
-    weight = 6
-
-[[main]]
     identifier = "post"
     name = "Posts"
     url = "/posts"
@@ -51,7 +45,7 @@
 [[social]]
     identifier = "email"
     name = "Email"
-    url = "mailto:fanst2021@mail.sustech.edu.cn"
+    url = "mailto:fan.sit@northeastern.edu"
     weight = 2
 
 [[social]]
