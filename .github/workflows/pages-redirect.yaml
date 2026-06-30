@@ -1,0 +1,28 @@
+name: Redirect GitHub Pages to fanst.cc
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+permissions:
+  pages: write
+  id-token: write
+concurrency:
+  group: pages
+  cancel-in-progress: false
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Build redirect site
+        run: |
+          mkdir -p _site
+          printf '%s' '<!doctype html><html><head><meta charset="utf-8"><title>Site Fan</title><link rel="canonical" href="https://fanst.cc/"><meta http-equiv="refresh" content="0; url=https://fanst.cc/"><script>location.replace("https://fanst.cc"+location.pathname+location.search+location.hash)</script></head><body>Redirecting to <a href="https://fanst.cc/">fanst.cc</a></body></html>' > _site/index.html
+          cp _site/index.html _site/404.html
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+      - id: deployment
+        uses: actions/deploy-pages@v4
