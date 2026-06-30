@@ -1,0 +1,116 @@
+{
+  "nodes": [
+    {
+      "id": "group-loop",
+      "type": "group",
+      "label": "Render Loop Test",
+      "x": -960,
+      "y": -900,
+      "width": 2000,
+      "height": 1800,
+      "color": "6"
+    },
+    {
+      "id": "text-start",
+      "type": "text",
+      "text": "## Step 1\nStart of the loop. This text node kicks off a chain that should visually wrap all the way back around to itself.",
+      "x": -180,
+      "y": -800,
+      "width": 360,
+      "height": 200,
+      "color": "1"
+    },
+    {
+      "id": "note",
+      "type": "file",
+      "file": "Posts/lorem-ipsum-test.md",
+      "x": 366,
+      "y": -466,
+      "width": 600,
+      "height": 500
+    },
+    {
+      "id": "website-card",
+      "type": "link",
+      "url": "https://jsoncanvas.org/",
+      "x": 221,
+      "y": 436,
+      "width": 380,
+      "height": 260,
+      "color": "5"
+    },
+    {
+      "id": "text-relay",
+      "type": "text",
+      "text": "## Step 4\nRelay node. Markdown check: **bold**, _italic_, `inline code`.\n\n- bullet a\n- bullet b",
+      "x": -581,
+      "y": 466,
+      "width": 340,
+      "height": 200,
+      "color": "3"
+    },
+    {
+      "id": "file-image",
+      "type": "file",
+      "file": "neu.png",
+      "x": -876,
+      "y": -376,
+      "width": 100,
+      "height": 100,
+      "color": "4"
+    }
+  ],
+  "edges": [
+    {
+      "id": "loop-edge-1",
+      "fromNode": "text-start",
+      "fromSide": "right",
+      "toNode": "note",
+      "toSide": "top",
+      "fromEnd": "none",
+      "toEnd": "arrow",
+      "label": "1 → 2"
+    },
+    {
+      "id": "loop-edge-2",
+      "fromNode": "note",
+      "fromSide": "bottom",
+      "toNode": "website-card",
+      "toSide": "top",
+      "fromEnd": "none",
+      "toEnd": "arrow",
+      "label": "2 → 3"
+    },
+    {
+      "id": "loop-edge-3",
+      "fromNode": "website-card",
+      "fromSide": "left",
+      "toNode": "text-relay",
+      "toSide": "right",
+      "fromEnd": "none",
+      "toEnd": "arrow",
+      "label": "3 → 4"
+    },
+    {
+      "id": "loop-edge-4",
+      "fromNode": "text-relay",
+      "fromSide": "top",
+      "toNode": "file-image",
+      "toSide": "bottom",
+      "fromEnd": "none",
+      "toEnd": "arrow",
+      "label": "4 → 5"
+    },
+    {
+      "id": "loop-edge-5",
+      "fromNode": "file-image",
+      "fromSide": "right",
+      "toNode": "text-start",
+      "toSide": "left",
+      "fromEnd": "none",
+      "toEnd": "arrow",
+      "label": "5 → 1 (closes the loop)",
+      "color": "2"
+    }
+  ]
+}

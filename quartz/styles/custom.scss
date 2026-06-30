@@ -1,0 +1,63 @@
+@use "./variables.scss" as *;
+
+// Link / PDF preview popovers (modest size)
+.popover > .popover-inner {
+  width: 34rem !important;
+  max-height: 50vh !important;
+}
+.popover .popover-inner iframe {
+  height: 46vh !important;
+}
+
+// Right sidebar: smaller graph, taller table of contents
+.graph > .graph-outer { height: 180px !important; }
+.toc { flex: 1 1 auto !important; }
+ul.toc-content.overflow { max-height: 60vh !important; }
+
+// ToC: clearer heading-level differentiation
+.toc .depth-0 > a { font-weight: 600; }
+.toc .depth-1 { padding-left: 1.1rem !important; }
+.toc .depth-2 { padding-left: 2.2rem !important; }
+.toc .depth-3 { padding-left: 3.3rem !important; }
+.toc .depth-1 > a::before,
+.toc .depth-2 > a::before,
+.toc .depth-3 > a::before,
+.toc .depth-4 > a::before { content: "\2013\00a0"; opacity: 0.5; }
+
+// External links: drop the trailing icon (link is already styled)
+a.external .external-icon { display: none !important; }
+
+// Article title: match (slightly exceed) body h1 size, more gap below breadcrumbs
+.article-title {
+  font-size: 2.2rem !important;
+  margin-top: 3rem !important;
+}
+
+// School icons in Education headings
+.school-icon {
+  height: 1.1em;
+  width: auto;
+  vertical-align: -0.18em;
+  margin-right: 0.45em;
+  border-radius: 3px;
+}
+
+// School icons in Education headings via ::before (ToC text stays clean)
+#northeastern-university::before,
+#southern-university-of-science-and-technology::before {
+  content: "";
+  display: inline-block;
+  width: 1.1em;
+  height: 1.1em;
+  margin-right: 0.45em;
+  vertical-align: -0.18em;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 3px;
+}
+#northeastern-university::before { background-image: url(/neu.png); }
+#southern-university-of-science-and-technology::before {
+  background-image: url(/sustech.png);
+  image-rendering: -webkit-optimize-contrast;
+}
