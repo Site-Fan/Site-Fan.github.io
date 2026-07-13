@@ -21,6 +21,7 @@ A lot of my friends have been asking me to write about them.[^1] So, here is a p
   - [Mengxuan Wu](https://cypher-bruce.github.io/)
   - [Haibin Lai](https://www.haibinlaiblog.top/)
 - **SUSTech Pros**
+  - [Blue (Ruogu) Yang](https://tonyyang0606.github.io/)
   - [Ruixiang Jiang](https://ruixiangj.top/)
   - [Monad](https://blog.monadx.com/)
   - [Zhuo (Zed) Wang](https://we-are-zed.github.io/)
