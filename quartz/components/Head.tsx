@@ -94,6 +94,16 @@ export default (() => {
         <link rel="icon" href={iconPath} />
         <meta name="description" content={description} />
         <meta name="generator" content="Quartz" />
+        {/* MapMyVisitors: invisible visitor-location tracker.
+            Loaded off-screen on every page so visits are recorded without a visible
+            widget. Skips the /friends page, which renders a visible map instead. */}
+        <script
+          data-mmv-tracker
+          dangerouslySetInnerHTML={{
+            __html:
+              "(function(){try{if(window.__mmvLoaded)return;var p=location.pathname.toLowerCase();if(p==='/friends'||p==='/friends/')return;window.__mmvLoaded=1;var add=function(){if(document.getElementById('mmv-tracker'))return;var d=document.createElement('div');d.id='mmv-tracker';d.setAttribute('aria-hidden','true');d.style.cssText='position:absolute;left:-99999px;top:-99999px;width:1px;height:1px;overflow:hidden;opacity:0;pointer-events:none;';var s=document.createElement('script');s.type='text/javascript';s.id='mapmyvisitors';s.src='//mapmyvisitors.com/map.js?d=BXp3e5DHvqoAts4RQlNk-jKVKM7zIz2L2k6J_2CuWUE&cl=ffffff&w=a';d.appendChild(s);document.body.appendChild(d);};if(document.body){add();}else{document.addEventListener('DOMContentLoaded',add);}}catch(e){}})();",
+          }}
+        />
 
         {css.map((resource) => CSSResourceToStyleElement(resource, true))}
         {js

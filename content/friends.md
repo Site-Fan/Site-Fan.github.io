@@ -50,3 +50,12 @@ Thank you my friends! You’re like Wi-Fi for my soul—always there when I need
 [^1]: If unfortunately you are not listed here, please don't be sad, it's just because I am suffering from Puberzheimer’s[^2]. Feel free to ask me to add you here with your personal page! 😊
 
 [^2]: Puberzheimer’s: Puberty + Alzheimer’s. A condition where you forget everything even during teenage years. 😂
+
+
+---
+
+### 🌍 Where my friends & visitors drop by
+
+<div style="max-width:520px;margin:1.5rem auto 0;text-align:center;">
+<script type="text/javascript" id="mapmyvisitors" src="//mapmyvisitors.com/map.js?d=BXp3e5DHvqoAts4RQlNk-jKVKM7zIz2L2k6J_2CuWUE&cl=ffffff&w=a"></script>
+</div>
