@@ -17,4 +17,4 @@ Haibin Lai, Sicheng Zhou, <u>Site Fan</u>, Zhuozhao Li.
 
 _54th International Conference on Parallel Processing (ICPP)_, Sep 2025.
 
-[\[Paper\]](https://doi.org/10.1145/3754598.3754603) [\[Slides\]](https://fanst.cc/ParaCOSM_presentation.pdf) [\[Code\]](https://github.com/SUSTech-HPCLab/ParaCOSM)
+[\[Paper\]](https://doi.org/10.1145/3754598.3754603) [\[Slides\]](https://fanst.cc/paracosm_presentation.pdf) [\[Code\]](https://github.com/SUSTech-HPCLab/ParaCOSM)
