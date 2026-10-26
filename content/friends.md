@@ -44,7 +44,7 @@ A lot of my friends have been asking me to write about them.[^1] So, here is a p
 ### Friends@Internet
 
 - Asa
-- Yuki
+- [Yuki](https://space.bilibili.com/358054682)
 
 Thank you my friends! You’re like Wi-Fi for my soul—always there when I need you and annoyingly missed when you’re not.
 
