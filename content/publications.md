@@ -11,7 +11,7 @@ _24th USENIX Symposium on Networked Systems Design and Implementation (NSDI)_, M
 
 [\[Paper\]](https://fanst.cc/litelib.pdf) [\[Code\]](https://github.com/OrderLab/LiteLib)
 
-### ParaCOSM: Parallel Framework for Accelerating Continuous Subgraph Matching
+### ParaCOSM: A Parallel Framework for Continuous Subgraph Matching
 
 Haibin Lai, Sicheng Zhou, <u>Site Fan</u>, Zhuozhao Li. 
 
